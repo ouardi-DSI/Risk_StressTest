@@ -90,9 +90,9 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Navigation_2_D_SEK" sap:VirtualizedContainerService.HintSize="512,1364" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Navigation_2_D_MAD" sap:VirtualizedContainerService.HintSize="512,1364" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Name="SEK_Existe" />
+      <Variable x:TypeArguments="x:Boolean" Name="MAD_Existe" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -101,13 +101,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_2_D_SEK</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_2_D_MAD</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Interest'" Found="[SEK_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+    <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Interest'" Found="[MAD_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
       <ui:ImageFound.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAYCAYAAACGLcGvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVGhD7ZXrCsIwDEb7xuoTK/h37zD5YBkxS9d2ScWWBA40F9LtDDG9nu818CFkOhIyHdllLsvixv32OFyUA7Oz8CWTv6QFLNbqGpiVH2NUDjJTSiZIEO0tQTK13mioMq9GyNwOIdNOk0z0Sn3sCJkNMnMznjL5Xbm67POzlvemKJMeWEMGathhlUl7tFz2OLVzvTDJBDyQY4e3TE5N72ymJ2aZgAJn7LDKBHx/ri77Wu2X/K1MDu2VZ0ntXC+G+JnzXPY4tXO9mPYPSMt7U5TJAz1CC3p4q0zA78rVZZ+ftbw3l2Tmgh7eQ+aINMksRcjcDiHTjirTAnaETMcXapU5C7tMrWmBCzsDH3EWdpmBlff6ASqb7k5BwSiKAAAAAElFTkSuQmCC" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAaCAYAAAAzBZtTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVGhD7ZXRDsIwCEX7x+oXa+Lr/mHmPrBhC8WtLZkNJCd2F4LuLHHp9XyvwThC8GBC8GA2wcuydON+exRfpIHZmfkSzG+8BSyWcgnM5g9oJgrBKaUmSBrttSDBUm8GRMFnKwSXhODBHBKMntXHjhC8c0qwNtNLMO3JkXIt4+R9T0zB+Y/l5IUMO3oIpl21jHIrk2a8aBIMeOEaO7wE07WWW5kHzYIBFc7Y0UNw7ZOwcivz4G8F87PV0zIPLvsX8cs5R5qrZR5c9iVXO/OMo/W1eQ9MwbzQI6SiG7mCYE4+58kpwVrRzbQKnolDgq0KwSUheDCi4BawIwTvFIJ7cFTwzGyCpWYLXGINPNiZ2QQHYwjBgwnBQ3mvH7zH+n5tSnw1AAAAAElFTkSuQmCC" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ce9a414-cd9e-4360-b6a4-67c87cb56ee6" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="3000">
@@ -117,7 +117,7 @@
         </ui:Target>
       </ui:ImageFound.Target>
     </ui:ImageFound>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not SEK_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not MAD_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,405" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -147,9 +147,9 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <ui:ImageFound ContinueOnError="{x:Null}" DisplayName="Image Exists 'xmanager.exe Interest'" Found="[SEK_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_5" Result="{x:Null}">
+          <ui:ImageFound ContinueOnError="{x:Null}" DisplayName="Image Exists 'xmanager.exe Interest'" Found="[MAD_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_5" Result="{x:Null}">
             <ui:ImageFound.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAYCAYAAACGLcGvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVGhD7ZXrCsIwDEb7xuoTK/h37zD5YBkxS9d2ScWWBA40F9LtDDG9nu818CFkOhIyHdllLsvixv32OFyUA7Oz8CWTv6QFLNbqGpiVH2NUDjJTSiZIEO0tQTK13mioMq9GyNwOIdNOk0z0Sn3sCJkNMnMznjL5Xbm67POzlvemKJMeWEMGathhlUl7tFz2OLVzvTDJBDyQY4e3TE5N72ymJ2aZgAJn7LDKBHx/ri77Wu2X/K1MDu2VZ0ntXC+G+JnzXPY4tXO9mPYPSMt7U5TJAz1CC3p4q0zA78rVZZ+ftbw3l2Tmgh7eQ+aINMksRcjcDiHTjirTAnaETMcXapU5C7tMrWmBCzsDH3EWdpmBlff6ASqb7k5BwSiKAAAAAElFTkSuQmCC" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAaCAYAAAAzBZtTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVGhD7ZXRDsIwCEX7x+oXa+Lr/mHmPrBhC8WtLZkNJCd2F4LuLHHp9XyvwThC8GBC8GA2wcuydON+exRfpIHZmfkSzG+8BSyWcgnM5g9oJgrBKaUmSBrttSDBUm8GRMFnKwSXhODBHBKMntXHjhC8c0qwNtNLMO3JkXIt4+R9T0zB+Y/l5IUMO3oIpl21jHIrk2a8aBIMeOEaO7wE07WWW5kHzYIBFc7Y0UNw7ZOwcivz4G8F87PV0zIPLvsX8cs5R5qrZR5c9iVXO/OMo/W1eQ9MwbzQI6SiG7mCYE4+58kpwVrRzbQKnolDgq0KwSUheDCi4BawIwTvFIJ7cFTwzGyCpWYLXGINPNiZ2QQHYwjBgwnBQ3mvH7zH+n5tSnw1AAAAAElFTkSuQmCC" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ce9a414-cd9e-4360-b6a4-67c87cb56ee6" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="3000">
@@ -192,7 +192,7 @@
     </ui:ClickImage>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="450,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_2_D_SEK</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_2_D_MAD</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153,11936</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153,10397</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,7 +98,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="670,11871" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="670,10332" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Stepworkflow" />
       <Variable x:TypeArguments="x:Int32" Name="Timeout">
@@ -400,13 +400,13 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="608,3770" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_Template_FXO_Simulation]">
+    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="608,2231" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_Template_FXO_Simulation]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574,3637" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574,2098" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Text" />
               <Variable x:TypeArguments="sd:DataTable" Name="DT" />
@@ -1476,7 +1476,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="Rate_On_Shore" sap:VirtualizedContainerService.HintSize="512,2448" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Rate_On_Shore" sap:VirtualizedContainerService.HintSize="512,909" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1787,10 +1787,10 @@
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
-              <Sequence DisplayName="OnShore_CHF" sap:VirtualizedContainerService.HintSize="450,1758" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence DisplayName="OnShore_CHF" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -1879,6 +1879,297 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_154" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+              <Sequence DisplayName="OnShore_SEK" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_2_D_SEK - Invoke Workflow File (Kondor\Interst_Rate_Simulation_OnShore\SEK\Navigation_2_D_SEK.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_163" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation_OnShore\SEK\Navigation_2_D_SEK.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_157" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_158" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Rate">5</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_30">
+                  <ui:GetFromClipboard.Result>
+                    <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
+                  </ui:GetFromClipboard.Result>
+                </ui:GetFromClipboard>
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_30" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GenerateDataTable>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_159" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_FXO_Simulation">IR-Simulation</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Colonne">Z</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Ligne">7</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">[DT]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_160" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Rate">50</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_31">
+                  <ui:GetFromClipboard.Result>
+                    <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
+                  </ui:GetFromClipboard.Result>
+                </ui:GetFromClipboard>
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_31" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GenerateDataTable>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_161" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_FXO_Simulation">IR-Simulation</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Colonne">AB</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Ligne">7</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">[DT]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_162" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+              <Sequence DisplayName="OnShore_MAD" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_2_D_MAD - Invoke Workflow File (Kondor\Interst_Rate_Simulation_OnShore\MAD\Navigation_2_D_MAD.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_171" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation_OnShore\MAD\Navigation_2_D_MAD.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_165" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_166" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Rate">5</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_32">
+                  <ui:GetFromClipboard.Result>
+                    <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
+                  </ui:GetFromClipboard.Result>
+                </ui:GetFromClipboard>
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_32" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GenerateDataTable>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_167" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_FXO_Simulation">IR-Simulation</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Colonne">AE</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Ligne">7</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">[DT]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_168" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Rate">50</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_33">
+                  <ui:GetFromClipboard.Result>
+                    <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
+                  </ui:GetFromClipboard.Result>
+                </ui:GetFromClipboard>
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_33" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GenerateDataTable>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_169" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_FXO_Simulation">IR-Simulation</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Colonne">AG</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Ligne">7</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">[DT]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_170" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+              <Sequence DisplayName="OnShore_EUR" sap:VirtualizedContainerService.HintSize="450,1735" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_2_D_EUR - Invoke Workflow File (Kondor\Interst_Rate_Simulation_OnShore\EUR\Navigation_2_D_EUR.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_179" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation_OnShore\EUR\Navigation_2_D_EUR.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_173" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_174" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Rate">5</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_34">
+                  <ui:GetFromClipboard.Result>
+                    <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
+                  </ui:GetFromClipboard.Result>
+                </ui:GetFromClipboard>
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_34" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GenerateDataTable>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_175" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_FXO_Simulation">IR-Simulation</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Colonne">AJ</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Ligne">7</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">[DT]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_176" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Rate">50</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_35">
+                  <ui:GetFromClipboard.Result>
+                    <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
+                  </ui:GetFromClipboard.Result>
+                </ui:GetFromClipboard>
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_35" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GenerateDataTable>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_177" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_FXO_Simulation">IR-Simulation</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Colonne">AL</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Ligne">7</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">[DT]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_178" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
