@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Saisi_Volatilite" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Saisi_Volatilite" this:Saisi_Volatilite.in_Volatilite="0.4" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_StepWorkflow" Type="InArgument(x:String)" />
     <x:Property Name="in_Timeout" Type="InArgument(x:Int32)" />
@@ -10,9 +10,6 @@
   <this:Saisi_Volatilite.in_Timeout>
     <InArgument x:TypeArguments="x:Int32" />
   </this:Saisi_Volatilite.in_Timeout>
-  <this:Saisi_Volatilite.in_Volatilite>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Saisi_Volatilite.in_Volatilite>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -162,9 +159,9 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Options'" Found="[Volatilite_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+    <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Options'" Found="[Volatilite_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_4">
       <ui:ImageFound.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAPCAYAAACm25zCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVEhL7ZJRCoAwDEN7/0sq7CBKB4UY69qJ6Bh+PJomcxJU1qVsM/AXGY35iojIKWz5SitTMDfNk/VdXivS6/Vy+LX4QtxVG5xfZei1poE+64hUkazPnqe9ZzM64rEiqg0+h5rnlUYvw6FINYIX4R6d9XT2GfQyDFfEdvYiTkWq6Vxil2PG2nacnoeTz3GWxS3yNVMUuVNCGfKL9FO2HeOBhd5NEWoQAAAAAElFTkSuQmCC" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKkAAAAbCAYAAAAH169RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVHhe7ZVbbsMwDAR94zYnboH8+g5pCYPNZkvqASeKDO/HQBRFWY44gZfvr+tNiJmRpGJ6JKmYHkkqpkeSiuk5hKTruooT8flxeej/YSSN8mJ+lmXpRpKKoZh0UT5DkorhuKT+KS/h9ZJUDAUl5TXExZSkYjguqZH1EaV8iqT2EAdzWJPlcV+2JyL6ca1nIrUzcd1jHjkWZfCuhkjKzfF5S9OyvS28Q9LenIjhu+Je/hPyt/6pknLeRqzhfDbH2ojsH8h7+HkOr2drmCuNDuY5Fht8Jy+X1LCHOJzDOY4cR/MSvZK25jkXxdHellhsRHfi/WQZDavfLSniL8AvEuWzmhZeIanFDtdhzGMWY07cie7lpZLygVmDonxW00ImqdFzVq02ilv3YE7cye4lEtSweklK67W4tsfnnBMbvfdi9bs/994QPJxfxOe1mtI6UpLUiPb687MzcA3HKIcj1/GaeKT3bqx+t6TvoCbpu5GkOX431sMaXi9Jn4wELYOS8hriYkpSMRyU1OQr4fUe/z0DJ7MiSY9L75dGkorhmHS9HFJS/xyI84D9P4Sk4txIUjE519sPqD6Wm9mfvgoAAAAASUVORK5CYII=" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="[cint(in_Timeout/10)]">
@@ -180,7 +177,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ImageFound>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not Volatilite_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,405" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -202,7 +199,7 @@
           </ui:TypeInto>
           <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Options'" Found="[Volatilite_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_3">
             <ui:ImageFound.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAPCAYAAACm25zCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACgSURBVEhL7ZJRCoAwDEN7/0sq7CBKB4UY69qJ6Bh+PJomcxJU1qVsM/AXGY35iojIKWz5SitTMDfNk/VdXivS6/Vy+LX4QtxVG5xfZei1poE+64hUkazPnqe9ZzM64rEiqg0+h5rnlUYvw6FINYIX4R6d9XT2GfQyDFfEdvYiTkWq6Vxil2PG2nacnoeTz3GWxS3yNVMUuVNCGfKL9FO2HeOBhd5NEWoQAAAAAElFTkSuQmCC" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKkAAAAbCAYAAAAH169RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVHhe7ZVbbsMwDAR94zYnboH8+g5pCYPNZkvqASeKDO/HQBRFWY44gZfvr+tNiJmRpGJ6JKmYHkkqpkeSiuk5hKTruooT8flxeej/YSSN8mJ+lmXpRpKKoZh0UT5DkorhuKT+KS/h9ZJUDAUl5TXExZSkYjguqZH1EaV8iqT2EAdzWJPlcV+2JyL6ca1nIrUzcd1jHjkWZfCuhkjKzfF5S9OyvS28Q9LenIjhu+Je/hPyt/6pknLeRqzhfDbH2ojsH8h7+HkOr2drmCuNDuY5Fht8Jy+X1LCHOJzDOY4cR/MSvZK25jkXxdHellhsRHfi/WQZDavfLSniL8AvEuWzmhZeIanFDtdhzGMWY07cie7lpZLygVmDonxW00ImqdFzVq02ilv3YE7cye4lEtSweklK67W4tsfnnBMbvfdi9bs/994QPJxfxOe1mtI6UpLUiPb687MzcA3HKIcj1/GaeKT3bqx+t6TvoCbpu5GkOX431sMaXi9Jn4wELYOS8hriYkpSMRyU1OQr4fUe/z0DJ7MiSY9L75dGkorhmHS9HFJS/xyI84D9P4Sk4txIUjE519sPqD6Wm9mfvgoAAAAASUVORK5CYII=" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="[cint(in_Timeout/10)]">
@@ -220,9 +217,6 @@
           </ui:ImageFound>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="not Volatilite_Existe" />
-      </ui:InterruptibleWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
