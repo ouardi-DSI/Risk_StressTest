@@ -1,0 +1,127 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Effacement_Config_FianancialReport" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_StepWorkflow" Type="InOutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1153,764</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Effacement_Config_FianancialReport_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Effacement_Config_FianancialReport" sap:VirtualizedContainerService.HintSize="416,674" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Effacement_Config_FianancialReport</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'applicationframehost.ex...'" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition OffsetX="10" OffsetY="10" Position="TopLeft" />
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAVCAYAAADrVNYBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASBSURBVFhH7Zb7T5NnFID3L+zX/bIhDrxE0eGCE+8aJSKDyRbBu4DRCGzRIAg0VcQiWB2WW4eoZGwrIoKXKCoKQkGBUqqFMoZKwRWRbqBcBCeXPfv4lG2RTy2SJcTsJE/S5DvntE/O+55+7zU1WnhX+F9mvDLuZLKyqtizR8fGjQbWrtWzc2cpqaklkrkvM25ksrNvsWVLNevWmfDxqcHb24iHx22WLzewcGEVS5aUER9/TbJ2mDHLpAcEEuf1BTnpJySf28KxY3o2bKglKKiB9HQrBsMTOjsH6Ojop6KiS5B4gJubiRkzygkNvSDZY4gxyUQtXYo5OJiH8kjyNm1Es1smmfc6Tp0ysH69CZmsCZ2umyc9g/x49jE79rcQtPcB5ws6GYrCwg5Wr65l2rQiFIqzkr3eWmbn3AVYdoWA8iA9UeGg2Is1So7uUIpk/qvw9zeyffs9UWQoAuXNLFrbgCLZyr5EK07ud4hRW+nv7+fixRbmzSvF2fm8ZK+3kon+bBbW3WFwIJnumEieymX0y/aBKpOfXD8hJzlWsu5lNBq9eD9OnGgVRe7df4bPN/dFkeFYta0Jh8W19PT00N7eTkREFZMnn0Eu14zoN2qZ8M3+GI5m0q1QMhgSQF9YOP0xStpiU6gJXsPBFY42y0RElIsXXa9/PpWXQ2fsYZZnPT5f14siLS0twrYzMmlSFl5eI+/oqGTC1q+hTGumqhqMBRbM3+fxu0LFo9hkDKGfk7L4fZJkOyRrpfD1rRI3VkfHwIuf/0/kXunAYUkdHv71VBhaRZGGhgbKyqpxcMhg5szjI/rZLBO8wZeywjuYboO2pJeCUrhghLpLt2gKdCPd25EDm76UrH0V3t6VLFtmELfWv6P5Yd/fIs0tj2ltbcVsNlNbW8v16zomTkwTNtt3I/rZJPNDWhrF1/ToDAPk5Xdzs3wQvXaAgvL7ZGUe4bjfXPw+/kCy9nUEBWmZP1/PzZtdLzSeR/Uv3eLR+mq7SRRpbGwURfR6PWp1Pvb2KaxcmTCin00yqigFfzwVjlZ9Lzd0fRQV96G9YSQ79zCKmK1s/tRJsu5NJCUV4eKiIy6uWZQY2li9vb00/fqINE0DeQVm8WiZTCYqKyspKSkhIOAkEyao2LVLPaLfG2U0KjVqZcTzL2OA3md/0tT8GydPHyJFFUCgq7Nkna3MmVPKokVGLl+20tXVRVtbG3X1zVwtuivwMzU1NcLa1qHValEqz+HkpGbKlMOSvWyazLeRoVQWFsKzQVGquq6A2P3b2OI6WzJ/NCiVV8Q/wlWrdOTk3MVisYjT+Gh2Hh+6nBPeACooLi4W8s6yYMFR7OwOC1NJluxl8wI4eURF3J5orl+5RFqCgs0LXSXz3oaQkDNMnXpJmNJV4XMJGRnlFBVVkp9fSmLiRfz8NOJE7OwOCcfsiGSPIWyWGSb3aBJytxWSz8ZCdPRpYd1m4eioEVfv0Mayt1cL9yNBIF44WkpBVHoiw4xa5r9GJsvA0zNVnMT06Ym4u8e/UWKYcSczFt4hGQt/AeuoVuaXf+0YAAAAAElFTkSuQmCC" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="56ece3a5-a453-4b28-ab54-452fbee8d75b" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Financial' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Effacement_Config_FianancialReport</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
