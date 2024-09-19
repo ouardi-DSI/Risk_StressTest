@@ -16,7 +16,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153,3198</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>847,3401</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Saisie_Rate_RateSimulation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,7 +99,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Saisie_Rate_RateSimulation" sap:VirtualizedContainerService.HintSize="512,3133" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Saisie_Rate_RateSimulation" sap:VirtualizedContainerService.HintSize="512,3336" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Rate_Existe" />
     </Sequence.Variables>
@@ -362,7 +362,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="[in_Timeout]" DisplayName="Click Image 'xmanager.exe Options'" sap:VirtualizedContainerService.HintSize="450,187" sap2010:WorkflowViewState.IdRef="ClickImage_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="[Cint(in_Timeout / 5)]" DisplayName="Click Image 'xmanager.exe Options'" sap:VirtualizedContainerService.HintSize="450,187" sap2010:WorkflowViewState.IdRef="ClickImage_14" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:ClickImage.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -390,7 +390,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ClickImage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,216" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,419" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -410,7 +410,7 @@
             </ui:CursorPosition>
           </ui:ClickImage.CursorPosition>
           <ui:ClickImage.Image>
-            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAANCAYAAAAnigciAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVDhPY3hw//H/gcajjoDhwecIBgYGFIwsB5NHpqmFMRxBDH/AHIGLTQ1MdHQg89HlKMV4QwIZjzoCm/igcQQyRpYjB6M4YmDw4/8ANLq48/E6bH0AAAAASUVORK5CYII=" />
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAANCAYAAAAnigciAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVDhPY3hw//H/gcajjoDhwecIBgYGFIwsB5NHpqmFMRxBDH/AHIGLTQ1MdHQg89HlKMV4QwIZjzoCm/igcQQyRpYjB6M4YmDw4/8ANLq48/E6bH0AAAAASUVORK5CYII=" />
           </ui:ClickImage.Image>
           <ui:ClickImage.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11d59773-2a40-4952-9b82-4953b69e0828" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;" TimeoutMS="3000">
@@ -422,10 +422,10 @@
         </ui:ClickImage>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -445,7 +445,7 @@
                 </ui:CursorPosition>
               </ui:ClickImage.CursorPosition>
               <ui:ClickImage.Image>
-                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABeSURBVEhL7ZA5DsAgDAT9/08GiYeQCmnZbIg4io1EMYU9LkaOdOXixAn6wjsoIh6gV3fKryCD3mbeK7fKcFCdldvBP4IQ9nyLfgfdDzFWQby3DULQz9IEOXCC+uRyA8nDFzifTwRcAAAAAElFTkSuQmCC" />
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABeSURBVEhL7ZA5DsAgDAT9/08GiYeQCmnZbIg4io1EMYU9LkaOdOXixAn6wjsoIh6gV3fKryCD3mbeK7fKcFCdldvBP4IQ9nyLfgfdDzFWQby3DULQz9IEOXCC+uRyA8nDFzifTwRcAAAAAElFTkSuQmCC" />
               </ui:ClickImage.Image>
               <ui:ClickImage.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11d59773-2a40-4952-9b82-4953b69e0828" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;" TimeoutMS="3000">
@@ -471,7 +471,7 @@
         </ui:CursorPosition>
       </ui:ClickImage.CursorPosition>
       <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAOCAYAAAA45qw5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABZSURBVDhP7Y8xDoBACAT5/yc1uYdwlcneup7QgIXFFDAkE+w8hnfwh8tYwmZ2A726Uz6CDD/NvFcuSjp8zcpl+FYYYc+36DNsP2ZawrxvDyPo31jClTSFh0+EbGOiSll+SQAAAABJRU5ErkJggg==" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAUCAYAAAAp46XeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB3SURBVFhH7dNBCoBACIVhb1yduGAOYqtAXq9Fg4aYi2/hOAQ/Q7Ium1Ylxz70LfahjKbj2Hk2HYc6LoGOQyxORG7wDt5je0/ucU8znrOdt0/jrpntInQcmvnn7Mz2EcJeDpWNw/NfxFl278UtLqOOQx2XQOG4oSe9Om/78QYyeQAAAABJRU5ErkJggg==" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11d59773-2a40-4952-9b82-4953b69e0828" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;" TimeoutMS="[in_Timeout]">

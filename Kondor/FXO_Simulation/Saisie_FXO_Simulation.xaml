@@ -284,7 +284,7 @@
     </ui:ClickImage>
     <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Options'" Found="[Image_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_8">
       <ui:ImageFound.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAATCAYAAABr29hqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVFhH7ZVBDoMwDATz47YvbiWu/IEqB1erxU7igIqRfBjhrE0KjKqUz3vZkutJEUFIEUFIEUFIEUFIEUHoing+Xi7WdVX3SdoMidByixQxR4oIwikiSim/ekZEvR+x8lZPcg3PrIBzo/cc4bAIfjmvCO0lOeutrczKrVlkZOZMXCL44epakOwqERat/fGKc7LGvtXDPudWpuEWIZtKzT9yNxHY79WYcd6bx1pjSgSCs5U7/iM4t2pr3sql5r6G+4yQja3NU8R+bWXI1GHd2vROh3W9Yr9XY+bNeYaZEtHCK6JSHxLR+lrWugexZqXmnDPsSc6Z1LzmWYsQIq5i5AP9i66I+mG9aPtEJI6IZfsC5/ibm33EF0IAAAAASUVORK5CYII=" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAATCAYAAABr29hqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVFhH7ZVBDoMwDATz47YvbiWu/IEqB1erxU7igIqRfBjhrE0KjKqUz3vZkutJEUFIEUFIEUFIEUFIEUHoing+Xi7WdVX3SdoMidByixQxR4oIwikiSim/ekZEvR+x8lZPcg3PrIBzo/cc4bAIfjmvCO0lOeutrczKrVlkZOZMXCL44epakOwqERat/fGKc7LGvtXDPudWpuEWIZtKzT9yNxHY79WYcd6bx1pjSgSCs5U7/iM4t2pr3sql5r6G+4yQja3NU8R+bWXI1GHd2vROh3W9Yr9XY+bNeYaZEtHCK6JSHxLR+lrWugexZqXmnDPsSc6Z1LzmWYsQIq5i5AP9i66I+mG9aPtEJI6IZfsC5/ibm33EF0IAAAAASUVORK5CYII=" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="09a288fd-e744-4f9f-927a-7a676cc24f46" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation' /&gt;" TimeoutMS="[Cint(in_Timeout/10)]">
@@ -326,7 +326,7 @@
               </ui:CursorPosition>
             </ui:ClickImage.CursorPosition>
             <ui:ClickImage.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAATCAYAAADGWsDDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADESURBVFhH7ZRtCsMwDENz/0tu0IN0H2BQFSluS7cF5h+POs9KN8RYu9+WtdhSpQiqFEGVIqhSBFWKoEoRyFJaaxucH+3CK45kA8ztvXOWrhT1geyys3POuyyyJ3MVHyvFMXo/PjEXZ9y7He7ZO8dMVwrusxkd+yyPMzPlL4W9m13e+Zh5z/xdKSMXTPVH+3riPpvRHfWcQbpS3vJ5AVF75UZ3EJeNmT073IVnFzOfOauQpfyK7Mt+iypFMFUps1CldCzrAy3fHgEdLTchAAAAAElFTkSuQmCC" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAATCAYAAADGWsDDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADESURBVFhH7ZRtCsMwDENz/0tu0IN0H2BQFSluS7cF5h+POs9KN8RYu9+WtdhSpQiqFEGVIqhSBFWKoEoRyFJaaxucH+3CK45kA8ztvXOWrhT1geyys3POuyyyJ3MVHyvFMXo/PjEXZ9y7He7ZO8dMVwrusxkd+yyPMzPlL4W9m13e+Zh5z/xdKSMXTPVH+3riPpvRHfWcQbpS3vJ5AVF75UZ3EJeNmT073IVnFzOfOauQpfyK7Mt+iypFMFUps1CldCzrAy3fHgEdLTchAAAAAElFTkSuQmCC" />
             </ui:ClickImage.Image>
             <ui:ClickImage.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a49cd79-e571-4269-86a1-c0e21d28d2bb" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation' /&gt;" TimeoutMS="[in_Timeout]">
@@ -350,7 +350,7 @@
     </If>
     <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Options'" Found="[Image_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
       <ui:ImageFound.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAATCAYAAADLRLCEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVFhH7ZTRDoIwDEX3x+oXa8Lr/gFTTZfLpd0YAYXQhxO6225hJ0p6PYcx+BIygJABhAxgJuN+e3SRc57sPzOmDM5qhAzg8jJSSqVeI0P2I9YMg3NL9/TSLYMv0CvDusiSy+0lAKnK4BeQtaLZljLwiXO6xr7Xwz7nXlZ6HLAM3ag1H7S1DOy3asw4b81jXTIOLBkIzgp7/DI492pv3su15n7pccDfDN3sHXA2GdWMA+sDam1Ujvo3aeU888k4sGTU6JUhyIsgmGNfc86wpzlnWvOaZ5G/yPDwXvJXzGTI5XrhM9ZyOBlXJmQUhvENg+XAFh5A9uwAAAAASUVORK5CYII=" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAATCAYAAADLRLCEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVFhH7ZTRDoIwDEX3x+oXa8Lr/gFTTZfLpd0YAYXQhxO6225hJ0p6PYcx+BIygJABhAxgJuN+e3SRc57sPzOmDM5qhAzg8jJSSqVeI0P2I9YMg3NL9/TSLYMv0CvDusiSy+0lAKnK4BeQtaLZljLwiXO6xr7Xwz7nXlZ6HLAM3ag1H7S1DOy3asw4b81jXTIOLBkIzgp7/DI492pv3su15n7pccDfDN3sHXA2GdWMA+sDam1Ujvo3aeU888k4sGTU6JUhyIsgmGNfc86wpzlnWvOaZ5G/yPDwXvJXzGTI5XrhM9ZyOBlXJmQUhvENg+XAFh5A9uwAAAAASUVORK5CYII=" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="09a288fd-e744-4f9f-927a-7a676cc24f46" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation' /&gt;" TimeoutMS="[Cint(in_Timeout/10)]">
@@ -379,7 +379,7 @@
               <ui:CursorPosition OffsetX="-10" OffsetY="10" Position="TopRight" />
             </ui:ClickImage.CursorPosition>
             <ui:ClickImage.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAUCAYAAAA9djs/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVFhH7ZThDoIwDIT3xuoTa8LfvQOmJmduR+uYIoFsP75wvbYwLkp63Ke5Z0YAntkTIwAurpdbEznn4mZnZBEA1zVGAD0GkFJ6628CsH3Gm1F4bu3OWpoC0EO3BuAdfs0Lbf3STBiAPtRqAG/LAPjKc6i5H/W4r37ocaEBYBhal7cOgPs1zZ76tflCQxheAAzPGv/4Bagf6Wg+8qEXfS70G4AFXQJnC8Dzqh9B7wbgqH+Bml9oCMML4BOtARj2cIZ97sNXj3vw1YPWWmdfHhd7BBChB9uLIgB7oVZ4/xcOEUCPjAA8sx+m+Qlldtl9SDIVfAAAAABJRU5ErkJggg==" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAUCAYAAAA9djs/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVFhH7ZThDoIwDIT3xuoTa8LfvQOmJmduR+uYIoFsP75wvbYwLkp63Ke5Z0YAntkTIwAurpdbEznn4mZnZBEA1zVGAD0GkFJ6628CsH3Gm1F4bu3OWpoC0EO3BuAdfs0Lbf3STBiAPtRqAG/LAPjKc6i5H/W4r37ocaEBYBhal7cOgPs1zZ76tflCQxheAAzPGv/4Bagf6Wg+8qEXfS70G4AFXQJnC8Dzqh9B7wbgqH+Bml9oCMML4BOtARj2cIZ97sNXj3vw1YPWWmdfHhd7BBChB9uLIgB7oVZ4/xcOEUCPjAA8sx+m+Qlldtl9SDIVfAAAAABJRU5ErkJggg==" />
             </ui:ClickImage.Image>
             <ui:ClickImage.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a49cd79-e571-4269-86a1-c0e21d28d2bb" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation' /&gt;" TimeoutMS="[in_Timeout]">

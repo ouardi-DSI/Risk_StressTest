@@ -107,7 +107,7 @@
     </ui:InvokeWorkflowFile>
     <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Interest'" Found="[JPY_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
       <ui:ImageFound.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAZCAYAAABAb2JNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEQSURBVGhD7ZXRDsIgDEX5Y/WLNdnr/mF6l9RVVgYDyoS0yVHGbTo50+hez2kx6mJSFTCpCphUBVap8zxX4357iDeSQO+IfKX6B84FQ6V9CfT6D2UEfqQ654ogUSQtBkmVsp7ZSc0tk7phUhVIlooslmOGSc2QGuqpLZXm0Zoj9XBC+604lEqHkPALe5ihJTUnu4psqYAXrjHDpH4+A15ypQIqrDFDSyqH91HO36+mG6k886E81teKLn/+Eik9rfirPyqacbQOkdLTikOpvJARUtGhSr+pdA9/j19LpPS04rTUUNGhSqWOQLLUWJnUDZOqwE5qCZhhUj2pNTgrdURWqVJQgi8vBB7miKxSjZpMyxvfevFv4aVtPAAAAABJRU5ErkJggg==" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVEhL7Y9LCoAwDAVzY/XECm5zh2gDSlJbISURF1kM/eS1w4Nt3SmalJiAeVooGpYgYii3pFXTi5SYeJUAgNpLWhmJylgkIzM+/04ikblrLlc1G21S84mk0Ms8JL2PXSV8eYbrB+4Sb1JigiXRQGkRC9IBb1vLQLout5kAAAAASUVORK5CYII=" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ce9a414-cd9e-4360-b6a4-67c87cb56ee6" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="3000">
@@ -127,17 +127,10 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
+              <ui:CursorPosition OffsetX="-10" OffsetY="10" Position="TopRight" />
             </ui:ClickImage.CursorPosition>
             <ui:ClickImage.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABvSURBVDhPzY1hCoAgDEZ3Y/XEBf31DouPCNbSrG1UDx64KU+ap4UjpVorR5lT2YKtnywegkTkshm08n0Qd6N7U7D35lZQRrQa7FxBKMHsDsIdnP8XlGB2BTXYDYOSqxgwB3s8Do54L+jxFIwwp8IrZ+aSA1XV2MEAAAAASUVORK5CYII=" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAcCAYAAAAqckyNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVFhH7ZRRCsIwEERzY/XECv3NHSrzEVhjmulml4WmGRgwaZ3HAzF93ts+Y5fY1XofsZyzW5+P1892JKMpVt+NtifWuh+pWiylZCo2mFjre5piY0hsNAwawVhiMnjGnmPDImZlqMUK0ALViB29wxgqMQmrK4MzNrRicq9uHdxhwywmIa3K4IwNTzFUBmdsmMTk+FFlcMaGtxhags/YWGIRP5MIxvrzKOnBShiUMRDGYQy1GNIDIgwawRgSY2HQCMY9xSzFxhkxS7GhFvMoE/PoaTG86Nl6P4rxJzZLl9jVOqnYtn8Bf5IHonLwSX0AAAAASUVORK5CYII=" />
             </ui:ClickImage.Image>
             <ui:ClickImage.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b99ee53b-7170-4586-a3b0-71a4cc6ab52e" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="[in_Timeout]">
@@ -147,9 +140,9 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <ui:ImageFound ContinueOnError="{x:Null}" DisplayName="Image Exists 'xmanager.exe Interest'" Found="[JPY_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_5" Result="{x:Null}">
+          <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Interest'" Found="[JPY_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_7">
             <ui:ImageFound.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAZCAYAAABAb2JNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEQSURBVGhD7ZXRDsIgDEX5Y/WLNdnr/mF6l9RVVgYDyoS0yVHGbTo50+hez2kx6mJSFTCpCphUBVap8zxX4357iDeSQO+IfKX6B84FQ6V9CfT6D2UEfqQ654ogUSQtBkmVsp7ZSc0tk7phUhVIlooslmOGSc2QGuqpLZXm0Zoj9XBC+604lEqHkPALe5ihJTUnu4psqYAXrjHDpH4+A15ypQIqrDFDSyqH91HO36+mG6k886E81teKLn/+Eik9rfirPyqacbQOkdLTikOpvJARUtGhSr+pdA9/j19LpPS04rTUUNGhSqWOQLLUWJnUDZOqwE5qCZhhUj2pNTgrdURWqVJQgi8vBB7miKxSjZpMyxvfevFv4aVtPAAAAABJRU5ErkJggg==" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVEhL7Y9LCoAwDAVzY/XECm5zh2gDSlJbISURF1kM/eS1w4Nt3SmalJiAeVooGpYgYii3pFXTi5SYeJUAgNpLWhmJylgkIzM+/04ikblrLlc1G21S84mk0Ms8JL2PXSV8eYbrB+4Sb1JigiXRQGkRC9IBb1vLQLout5kAAAAASUVORK5CYII=" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ce9a414-cd9e-4360-b6a4-67c87cb56ee6" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="3000">
@@ -180,7 +173,7 @@
         </ui:CursorPosition>
       </ui:ClickImage.CursorPosition>
       <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAQCAYAAABN0MIqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADBSURBVFhH7ZRLCsMwDER9/0u2kK3v4BKCwjBIsmRnEagWD1ujnxlIWu99FBft+zlGcVFmAGUGUGYAZQYQMqO1dqPlNbBn1mfVen1ebpWpGbw0+ohM38qO6DsypD+T6CO0OquXdYlRP+8ca/cdXmMGgjqemoa5XcJmnEt5sWgI5rDW0jRdYp7nxU8Q/oFquofWY81hXWJvhlezSvoHGoX7vDlWLZ8zbZeQGYxWx2R6OC8x6jzHuiPpek38V8qMm2P8AHpTPymNJGFMAAAAAElFTkSuQmCC" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAQCAYAAABN0MIqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADBSURBVFhH7ZRLCsMwDER9/0u2kK3v4BKCwjBIsmRnEagWD1ujnxlIWu99FBft+zlGcVFmAGUGUGYAZQYQMqO1dqPlNbBn1mfVen1ebpWpGbw0+ohM38qO6DsypD+T6CO0OquXdYlRP+8ca/cdXmMGgjqemoa5XcJmnEt5sWgI5rDW0jRdYp7nxU8Q/oFquofWY81hXWJvhlezSvoHGoX7vDlWLZ8zbZeQGYxWx2R6OC8x6jzHuiPpek38V8qMm2P8AHpTPymNJGFMAAAAAElFTkSuQmCC" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="55fffcf7-7612-48f1-8bf7-e788d7db670d" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="[in_Timeout]">

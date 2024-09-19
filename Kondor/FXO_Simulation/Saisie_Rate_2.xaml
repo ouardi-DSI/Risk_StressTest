@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153,2649</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>847,2649</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Saisie_Rate_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -193,7 +193,7 @@
           </ui:TypeInto>
           <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Options'" Found="[Rate2_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_4">
             <ui:ImageFound.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAAWCAYAAAD0FL9fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVGhD7dbNCsMgEARg37jNE7fQa94hIYdthmV/1JRGcA4fjaMJRQa0vF+fjSjCklBqyJKs60oDGbYkVk73YEkoxZJQiiWhFEtCqbQkpZQvzHCNl+N73jsWryTyPfxupHZN7fdmFZZEb5yMazbUe7dGVJJorLXOt/zHmTSVROfHL67RuTfGtZbWksi3cT7KZKxFczPrPm70GH/1szWOXDluMK95Rl4+u6aLq2yi3kwr99bU6DlujmeRzWOOc5jR6Sd3Eiv31tToOW50Fj0jL6fTlCWx3iNf951Er9G5tSaaR1eOG8wxi8ZI5ujUdCf5F68kdA+WhFIsCaVYEkqxJJQasiTPx0LDWLYdmsDcL8mAD6IAAAAASUVORK5CYII=" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAAWCAYAAAD0FL9fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVGhD7dbNCsMgEARg37jNE7fQa94hIYdthmV/1JRGcA4fjaMJRQa0vF+fjSjCklBqyJKs60oDGbYkVk73YEkoxZJQiiWhFEtCqbQkpZQvzHCNl+N73jsWryTyPfxupHZN7fdmFZZEb5yMazbUe7dGVJJorLXOt/zHmTSVROfHL67RuTfGtZbWksi3cT7KZKxFczPrPm70GH/1szWOXDluMK95Rl4+u6aLq2yi3kwr99bU6DlujmeRzWOOc5jR6Sd3Eiv31tToOW50Fj0jL6fTlCWx3iNf951Er9G5tSaaR1eOG8wxi8ZI5ujUdCf5F68kdA+WhFIsCaVYEkqxJJQasiTPx0LDWLYdmsDcL8mAD6IAAAAASUVORK5CYII=" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="[cint(in_Timeout/10)]">
