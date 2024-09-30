@@ -135,17 +135,17 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="608,7352" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="900,7703" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Stepworkflow" />
-      <Variable x:TypeArguments="x:Int32" Default="20000" Name="Timeout" />
-      <Variable x:TypeArguments="x:String" Default="Z:\" Name="Chemin_Kondor" />
-      <Variable x:TypeArguments="x:String" Default="C:\Process\SDM_StressTest\Archive" Name="Chemin_Archive" />
-      <Variable x:TypeArguments="x:Int32" Default="10" Name="NumberOfRetry" />
-      <Variable x:TypeArguments="x:String" Default="180924" Name="Date_JJMMYY" />
-      <Variable x:TypeArguments="x:String" Default="C:\Process\SDM_StressTest\Archive\060924\SPOTOFF 060924.xls" Name="Chemin_SPOTOFF" />
+      <Variable x:TypeArguments="x:Int32" Name="Timeout" />
+      <Variable x:TypeArguments="x:String" Name="Chemin_Kondor" />
+      <Variable x:TypeArguments="x:String" Name="Chemin_Archive" />
+      <Variable x:TypeArguments="x:Int32" Name="NumberOfRetry" />
+      <Variable x:TypeArguments="x:String" Name="Date_JJMMYY" />
+      <Variable x:TypeArguments="x:String" Name="Chemin_SPOTOFF" />
       <Variable x:TypeArguments="x:String" Name="Chemin_EQ" />
-      <Variable x:TypeArguments="x:String" Default="C:\Process\SDM_StressTest\Archive\060924\OB 060924.xls" Name="CHemin_OB" />
+      <Variable x:TypeArguments="x:String" Name="CHemin_OB" />
       <Variable x:TypeArguments="x:String" Name="Chemin_MID" />
       <Variable x:TypeArguments="x:String" Name="File_TMP_Csv" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_TMP" />
@@ -153,7 +153,7 @@
       <Variable x:TypeArguments="sd:DataTable" Name="DT_Bonds" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_AE_L42" />
       <Variable x:TypeArguments="x:Int32" Name="Count" />
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[New Dictionary(Of String, String)]" Name="DIct_MO_SDM" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="DIct_MO_SDM" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_Equities" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_FXO_Simulation" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_IR_Simulation" />
@@ -163,18 +163,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Creation Chemin StressTest" sap:VirtualizedContainerService.HintSize="546,521" sap2010:WorkflowViewState.IdRef="Sequence_43">
+    <Sequence DisplayName="Creation Chemin StressTest" sap:VirtualizedContainerService.HintSize="518,493" sap2010:WorkflowViewState.IdRef="Sequence_43">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2)]" />
-      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR]" />
-      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="388,177" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_AncieneeDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_AncienneMois_FR +&quot;\&quot; + in_AncieneeDate_JJ_MM_YYYY +&quot;.xls&quot;]" />
+      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2)]" />
+      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR]" />
+      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_AncieneeDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_AncienneMois_FR +&quot;\&quot; + in_AncieneeDate_JJ_MM_YYYY +&quot;.xls&quot;]" />
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lancement_Kondor - Invoke Workflow File (Kondor\Lancement_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_236" UnSafe="False" WorkflowFileName="Kondor\Lancement_Kondor.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lancement_Kondor - Invoke Workflow File (Kondor\Lancement_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_236" UnSafe="False" WorkflowFileName="Kondor\Lancement_Kondor.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Kondor">C:\Users\m.ouardi\Desktop\KPLUSLIVE.xcas</InArgument>
@@ -186,7 +186,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Lancement_Kondor - Invoke Workflow File (Kondor\Verification_Lancement_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_237" UnSafe="False" WorkflowFileName="Kondor\Verification_Lancement_Kondor.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Lancement_Kondor - Invoke Workflow File (Kondor\Verification_Lancement_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_237" UnSafe="False" WorkflowFileName="Kondor\Verification_Lancement_Kondor.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -198,7 +198,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_Kondor - Invoke Workflow File (Kondor\Authentification_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_238" UnSafe="False" WorkflowFileName="Kondor\Authentification_Kondor.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_Kondor - Invoke Workflow File (Kondor\Authentification_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_238" UnSafe="False" WorkflowFileName="Kondor\Authentification_Kondor.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Password" />
@@ -211,7 +211,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Authentification_Kondor - Invoke Workflow File (Kondor\Verification_Authentification_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_239" UnSafe="False" WorkflowFileName="Kondor\Verification_Authentification_Kondor.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Authentification_Kondor - Invoke Workflow File (Kondor\Verification_Authentification_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_239" UnSafe="False" WorkflowFileName="Kondor\Verification_Authentification_Kondor.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -223,7 +223,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_RealTimeManager - Invoke Workflow File (Kondor\Navigation_RealTimeManager.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_240" UnSafe="False" WorkflowFileName="Kondor\Navigation_RealTimeManager.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_RealTimeManager - Invoke Workflow File (Kondor\Navigation_RealTimeManager.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_240" UnSafe="False" WorkflowFileName="Kondor\Navigation_RealTimeManager.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">[Timeout]</InArgument>
@@ -235,7 +235,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verfication_Navigation_RealTime - Invoke Workflow File (Kondor\Verfication_Navigation_RealTime.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_241" UnSafe="False" WorkflowFileName="Kondor\Verfication_Navigation_RealTime.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verfication_Navigation_RealTime - Invoke Workflow File (Kondor\Verfication_Navigation_RealTime.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_241" UnSafe="False" WorkflowFileName="Kondor\Verfication_Navigation_RealTime.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_Stepworkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[timeout]</InArgument>
@@ -247,7 +247,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Position_Local - Invoke Workflow File (Kondor\Navigation_Position_Local.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_242" UnSafe="False" WorkflowFileName="Kondor\Navigation_Position_Local.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Position_Local - Invoke Workflow File (Kondor\Navigation_Position_Local.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_242" UnSafe="False" WorkflowFileName="Kondor\Navigation_Position_Local.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -259,7 +259,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Position_Local - Invoke Workflow File (Kondor\Verification_Navigation_Position_Local.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_243" UnSafe="False" WorkflowFileName="Kondor\Verification_Navigation_Position_Local.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Position_Local - Invoke Workflow File (Kondor\Verification_Navigation_Position_Local.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_243" UnSafe="False" WorkflowFileName="Kondor\Verification_Navigation_Position_Local.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -271,7 +271,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_GroupFolder - Invoke Workflow File (Kondor\Saisie_GroupFolder.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_244" UnSafe="False" WorkflowFileName="Kondor\Saisie_GroupFolder.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_GroupFolder - Invoke Workflow File (Kondor\Saisie_GroupFolder.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_244" UnSafe="False" WorkflowFileName="Kondor\Saisie_GroupFolder.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SubFolder">SPOT_OFFSH</InArgument>
@@ -284,7 +284,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_SaisieGroupFolder_Spot_OFFSH - Invoke Workflow File (Kondor\Verification_SaisieGroupFolder_Spot_OFFSH.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_245" UnSafe="False" WorkflowFileName="Kondor\Verification_SaisieGroupFolder_Spot_OFFSH.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_SaisieGroupFolder_Spot_OFFSH - Invoke Workflow File (Kondor\Verification_SaisieGroupFolder_Spot_OFFSH.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_245" UnSafe="False" WorkflowFileName="Kondor\Verification_SaisieGroupFolder_Spot_OFFSH.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">[Timeout]</InArgument>
@@ -296,7 +296,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Output_Excel - Invoke Workflow File (Kondor\Navigation_Output_Excel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_262" UnSafe="False" WorkflowFileName="Kondor\Navigation_Output_Excel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Output_Excel - Invoke Workflow File (Kondor\Navigation_Output_Excel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_262" UnSafe="False" WorkflowFileName="Kondor\Navigation_Output_Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -308,7 +308,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_navigation_output_Excel - Invoke Workflow File (Kondor\Verification_navigation_output_Excel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_263" UnSafe="False" WorkflowFileName="Kondor\Verification_navigation_output_Excel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_navigation_output_Excel - Invoke Workflow File (Kondor\Verification_navigation_output_Excel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_263" UnSafe="False" WorkflowFileName="Kondor\Verification_navigation_output_Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">[Timeout]</InArgument>
@@ -320,7 +320,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_264" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_264" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_Stepworkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -334,7 +334,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_265" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_265" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\SPOTOFF "  + Date_JJMMYY + ".xls"]</InArgument>
@@ -346,7 +346,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_266" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_266" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\SPOTOFF "  + Date_JJMMYY+".xls"]</InArgument>
@@ -362,7 +362,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Tab_Realtime_SpotOFFSH - Invoke Workflow File (Kondor\Fermeture_Tab_Realtime_SpotOFFSH.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_267" UnSafe="False" WorkflowFileName="Kondor\Fermeture_Tab_Realtime_SpotOFFSH.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Tab_Realtime_SpotOFFSH - Invoke Workflow File (Kondor\Fermeture_Tab_Realtime_SpotOFFSH.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_267" UnSafe="False" WorkflowFileName="Kondor\Fermeture_Tab_Realtime_SpotOFFSH.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -373,7 +373,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_ReportManager - Invoke Workflow File (Kondor\Navigation_ReportManager.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_268" UnSafe="False" WorkflowFileName="Kondor\Navigation_ReportManager.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_ReportManager - Invoke Workflow File (Kondor\Navigation_ReportManager.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_268" UnSafe="False" WorkflowFileName="Kondor\Navigation_ReportManager.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -385,7 +385,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_navication_ReportManager - Invoke Workflow File (Kondor\Verification_navication_ReportManager.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_269" UnSafe="False" WorkflowFileName="Kondor\Verification_navication_ReportManager.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_navication_ReportManager - Invoke Workflow File (Kondor\Verification_navication_ReportManager.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_269" UnSafe="False" WorkflowFileName="Kondor\Verification_navication_ReportManager.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="Io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -397,7 +397,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_FinancialReport - Invoke Workflow File (Kondor\Navigation_FinancialReport.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_270" UnSafe="False" WorkflowFileName="Kondor\Navigation_FinancialReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_FinancialReport - Invoke Workflow File (Kondor\Navigation_FinancialReport.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_270" UnSafe="False" WorkflowFileName="Kondor\Navigation_FinancialReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -409,7 +409,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="verification_Navigation_FinancialReport - Invoke Workflow File (Kondor\verification_Navigation_FinancialReport.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_271" UnSafe="False" WorkflowFileName="Kondor\verification_Navigation_FinancialReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="verification_Navigation_FinancialReport - Invoke Workflow File (Kondor\verification_Navigation_FinancialReport.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_271" UnSafe="False" WorkflowFileName="Kondor\verification_Navigation_FinancialReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="Io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -421,7 +421,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_FinancialReport_Config - Invoke Workflow File (Kondor\Saisie_FinancialReport_Config.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_272" UnSafe="False" WorkflowFileName="Kondor\Saisie_FinancialReport_Config.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_FinancialReport_Config - Invoke Workflow File (Kondor\Saisie_FinancialReport_Config.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_272" UnSafe="False" WorkflowFileName="Kondor\Saisie_FinancialReport_Config.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -435,7 +435,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_FinancialReport_Config - Invoke Workflow File (Kondor\Verification_Saisie_FinancialReport_Config.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_273" UnSafe="False" WorkflowFileName="Kondor\Verification_Saisie_FinancialReport_Config.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_FinancialReport_Config - Invoke Workflow File (Kondor\Verification_Saisie_FinancialReport_Config.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_273" UnSafe="False" WorkflowFileName="Kondor\Verification_Saisie_FinancialReport_Config.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -447,7 +447,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_261" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_261" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_Stepworkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -461,7 +461,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_246" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_246" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\EQ "  + Date_JJMMYY + ".xls"]</InArgument>
@@ -473,7 +473,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_249" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_249" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\EQ "  + Date_JJMMYY+".xls"]</InArgument>
@@ -489,7 +489,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Effacement_Config_FianancialReport - Invoke Workflow File (Kondor\Effacement_Config_FianancialReport.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_247" UnSafe="False" WorkflowFileName="Kondor\Effacement_Config_FianancialReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Effacement_Config_FianancialReport - Invoke Workflow File (Kondor\Effacement_Config_FianancialReport.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_247" UnSafe="False" WorkflowFileName="Kondor\Effacement_Config_FianancialReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -500,7 +500,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_FinancialReport_Config_Bonds - Invoke Workflow File (Kondor\Saisie_FinancialReport_Config_Bonds.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_248" UnSafe="False" WorkflowFileName="Kondor\Saisie_FinancialReport_Config_Bonds.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_FinancialReport_Config_Bonds - Invoke Workflow File (Kondor\Saisie_FinancialReport_Config_Bonds.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_248" UnSafe="False" WorkflowFileName="Kondor\Saisie_FinancialReport_Config_Bonds.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_STepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -514,7 +514,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_250" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_250" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_Stepworkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -528,7 +528,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_251" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_251" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\OB "  + Date_JJMMYY + ".xls"]</InArgument>
@@ -540,7 +540,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_252" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_252" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\OB "  + Date_JJMMYY + ".xls"]</InArgument>
@@ -556,7 +556,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Tab_FinancialReport_Bonds - Invoke Workflow File (Kondor\Fermeture_Tab_FinancialReport_Bonds.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_258" UnSafe="False" WorkflowFileName="Kondor\Fermeture_Tab_FinancialReport_Bonds.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Tab_FinancialReport_Bonds - Invoke Workflow File (Kondor\Fermeture_Tab_FinancialReport_Bonds.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_258" UnSafe="False" WorkflowFileName="Kondor\Fermeture_Tab_FinancialReport_Bonds.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -567,7 +567,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_KSQL - Invoke Workflow File (Kondor\Navigation_KSQL.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_257" UnSafe="False" WorkflowFileName="Kondor\Navigation_KSQL.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_KSQL - Invoke Workflow File (Kondor\Navigation_KSQL.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_257" UnSafe="False" WorkflowFileName="Kondor\Navigation_KSQL.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -578,7 +578,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Ksql - Invoke Workflow File (Kondor\Verification_Navigation_Ksql.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_253" UnSafe="False" WorkflowFileName="Kondor\Verification_Navigation_Ksql.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Ksql - Invoke Workflow File (Kondor\Verification_Navigation_Ksql.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_253" UnSafe="False" WorkflowFileName="Kondor\Verification_Navigation_Ksql.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -590,7 +590,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_KSQL_MID - Invoke Workflow File (Kondor\Saisie_KSQL_MID.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_254" UnSafe="False" WorkflowFileName="Kondor\Saisie_KSQL_MID.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_KSQL_MID - Invoke Workflow File (Kondor\Saisie_KSQL_MID.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_254" UnSafe="False" WorkflowFileName="Kondor\Saisie_KSQL_MID.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -603,7 +603,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_KSQL_MID - Invoke Workflow File (Kondor\Verification_Saisie_KSQL_MID.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_255" UnSafe="False" WorkflowFileName="Kondor\Verification_Saisie_KSQL_MID.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_KSQL_MID - Invoke Workflow File (Kondor\Verification_Saisie_KSQL_MID.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_255" UnSafe="False" WorkflowFileName="Kondor\Verification_Saisie_KSQL_MID.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -615,7 +615,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Telechargement_MID - Invoke Workflow File (Kondor\Navigation_Telechargement_MID.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_256" UnSafe="False" WorkflowFileName="Kondor\Navigation_Telechargement_MID.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Telechargement_MID - Invoke Workflow File (Kondor\Navigation_Telechargement_MID.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_256" UnSafe="False" WorkflowFileName="Kondor\Navigation_Telechargement_MID.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -627,7 +627,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_259" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_Fichier_Excel - Invoke Workflow File (Kondor\Telechargement_Fichier_Excel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_259" UnSafe="False" WorkflowFileName="Kondor\Telechargement_Fichier_Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_Stepworkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -641,7 +641,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_260" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Telechargement_FichierExcel - Invoke Workflow File (Kondor\Verification_Telechargement_FichierExcel.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_260" UnSafe="False" WorkflowFileName="Kondor\Verification_Telechargement_FichierExcel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\MID "  + Date_JJMMYY + ".xls"]</InArgument>
@@ -653,7 +653,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copie_Fichier_From_Kondor_To_Local - Invoke Workflow File (Kondor\Copie_Fichier_From_Kondor_To_Local.xaml)" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" UnSafe="False" WorkflowFileName="Kondor\Copie_Fichier_From_Kondor_To_Local.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Fichier_Kondor" xml:space="preserve">[Chemin_Kondor.trimEnd("\"c) + "\MID "  + Date_JJMMYY + ".xls"]</InArgument>
@@ -669,7 +669,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Tab_MID - Invoke Workflow File (Kondor\Fermeture_Tab_MID.xaml)" sap:VirtualizedContainerService.HintSize="546,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="Kondor\Fermeture_Tab_MID.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Tab_MID - Invoke Workflow File (Kondor\Fermeture_Tab_MID.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="Kondor\Fermeture_Tab_MID.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -680,7 +680,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Copie Template" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="Sequence_34">
+    <Sequence DisplayName="Copie Template" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="Sequence_34">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -732,13 +732,13 @@
         <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_CHemin_AL2_Archive.TrimEnd(&quot;\&quot;c) + &quot;\&quot; + Date_JJMMYY +&quot;\AE L42.xlsm&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="388,177" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[in_Chemin_Template_AEL2]" />
       </Sequence>
     </Sequence>
-    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="546,2975" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="518,3447" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2833" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,3305" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Text" />
               <Variable x:TypeArguments="sd:DataTable" Name="DT" />
@@ -1722,7 +1722,7 @@
             </Sequence>
             <Sequence DisplayName="Sensibility_TRESOMAD" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <Sequence.Variables>
-                <Variable x:TypeArguments="x:String" Default="10,9,8,7,0,0,0,0,0,0" Name="Indices_To_Remove_Sensibility" />
+                <Variable x:TypeArguments="x:String" Name="Indices_To_Remove_Sensibility" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -3866,31 +3866,31 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_2_D_XOF_OffShore - Invoke Workflow File (Kondor\Interst_Rate_Simulation_OffShore\XOF\Navigation_2_D_XOF_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_230" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation_OffShore\XOF\Navigation_2_D_XOF_OffShore.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_2_D_XOF_OffShore - Invoke Workflow File (Kondor\Interst_Rate_Simulation_OffShore\XOF\Navigation_2_D_XOF_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_230" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation_OffShore\XOF\Navigation_2_D_XOF_OffShore.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
                     <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_222" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_222" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Verification_Navigation_2_D_Risk_Rate.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
                     <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_223" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_223" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
                     <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_Rate">5</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_46">
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_46">
                   <ui:GetFromClipboard.Result>
                     <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
                   </ui:GetFromClipboard.Result>
                 </ui:GetFromClipboard>
-                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_46" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_46" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3898,7 +3898,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:GenerateDataTable>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_224" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_224" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
@@ -3914,19 +3914,19 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_225" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Rate_RateSimulation - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_225" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Saisie_Rate_RateSimulation.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
                     <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_Rate">50</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_47">
+                <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GetFromClipboard_47">
                   <ui:GetFromClipboard.Result>
                     <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
                   </ui:GetFromClipboard.Result>
                 </ui:GetFromClipboard>
-                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_47" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
+                <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" DataTable="[DT]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_47" Input="[text.Replace(&quot; &quot;,&quot;&quot;)]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3934,7 +3934,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:GenerateDataTable>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_226" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Simulation_Excel - Invoke Workflow File (Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_226" UnSafe="False" WorkflowFileName="Kondor\FXO_Simulation\Ecriture_Simulation_Excel.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_FXO_Simulation">[in_chemin_Template_FXO_Simulation]</InArgument>
@@ -3950,7 +3950,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_227" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_2_D_Risk_Rate - Invoke Workflow File (Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml)" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_227" UnSafe="False" WorkflowFileName="Kondor\Interst_Rate_Simulation\Fermeture_2_D_Risk_Rate.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
@@ -3967,22 +3967,26 @@
                 <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <Sequence DisplayName="Gap_USD" sap:VirtualizedContainerService.HintSize="450,1326" sap2010:WorkflowViewState.IdRef="Sequence_84">
+            <Sequence DisplayName="Gap_USD" sap:VirtualizedContainerService.HintSize="450,1826" sap2010:WorkflowViewState.IdRef="Sequence_84">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="CHemin_US_SWAP" />
+                <Variable x:TypeArguments="x:String" Name="Montant_US_SWAP" />
+                <Variable x:TypeArguments="x:String" Name="Chemin_USDOIS" />
+                <Variable x:TypeArguments="x:String" Name="Montant_USDOIS" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Gap_Analysis - Invoke Workflow File (Kondor\US_IR_GAP\Navigation_Gap_Analysis.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_339" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Navigation_Gap_Analysis.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Gap_Analysis - Invoke Workflow File (Kondor\US_IR_GAP\Navigation_Gap_Analysis.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_339" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Navigation_Gap_Analysis.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_GAP_Analaysis_USD - Invoke Workflow File (Kondor\US_IR_GAP\Saisie_GAP_Analaysis_USD.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_340" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Saisie_GAP_Analaysis_USD.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_GAP_Analaysis_USD - Invoke Workflow File (Kondor\US_IR_GAP\Saisie_GAP_Analaysis_USD.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_340" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Saisie_GAP_Analaysis_USD.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_FolderGroup">MM_DESK</InArgument>
@@ -3990,13 +3994,13 @@
                   <InArgument x:TypeArguments="x:String" x:Key="in_CurveConfiguration">GAPMLS</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_GAP_Analaysis - Invoke Workflow File (Kondor\US_IR_GAP\Verification_Saisie_GAP_Analaysis.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_341" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Verification_Saisie_GAP_Analaysis.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_GAP_Analaysis - Invoke Workflow File (Kondor\US_IR_GAP\Verification_Saisie_GAP_Analaysis.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_341" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Verification_Saisie_GAP_Analaysis.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_GAP - Invoke Workflow File (Kondor\US_IR_GAP\Telechargement_GAP.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_342" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Telechargement_GAP.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_GAP - Invoke Workflow File (Kondor\US_IR_GAP\Telechargement_GAP.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_342" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Telechargement_GAP.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[Timeout]</InArgument>
@@ -4005,19 +4009,34 @@
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Archive">[Chemin_Archive]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetry">[NumberOfRetry]</InArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="out_Chemin_US_SWAP">[CHemin_US_SWAP]</OutArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_Chemin_USDOIS" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_Chemin_USDOIS">[Chemin_USDOIS]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_GAP_Analysis_Result - Invoke Workflow File (Kondor\US_IR_GAP\Fermeture_GAP_Analysis_Result.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_343" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Fermeture_GAP_Analysis_Result.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_GAP_Analysis_Result - Invoke Workflow File (Kondor\US_IR_GAP\Fermeture_GAP_Analysis_Result.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_343" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Fermeture_GAP_Analysis_Result.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_GAP_Analysis - Invoke Workflow File (Kondor\US_IR_GAP\Fermeture_GAP_Analysis.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_344" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Fermeture_GAP_Analysis.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_GAP_Analysis - Invoke Workflow File (Kondor\US_IR_GAP\Fermeture_GAP_Analysis.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_344" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Fermeture_GAP_Analysis.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lecture_Fichier_US_SWAP - Invoke Workflow File (Kondor\US_IR_GAP\Lecture_Fichier_US_SWAP.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_345" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Lecture_Fichier_US_SWAP.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_US_SWAP">[CHemin_US_SWAP]</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_Montant">[Montant_US_SWAP]</OutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lecture_Fichier_USD_IS - Invoke Workflow File (Kondor\US_IR_GAP\Lecture_Fichier_USD_IS.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_346" UnSafe="False" WorkflowFileName="Kondor\US_IR_GAP\Lecture_Fichier_USD_IS.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_US_SWAP">[Chemin_USDOIS]</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_Montant">[Montant_USDOIS]</OutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <ui:ExcelWriteCell Cell="R3" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="416,111" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="IR-Simulation" Text="[&quot;=&quot; +Montant_US_SWAP +&quot;+&quot;+ Montant_USDOIS]" />
             </Sequence>
           </Sequence>
         </ActivityAction>
@@ -4029,13 +4048,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_BKAM - Invoke Workflow File (BKAM\Navigation_BKAM.xaml)" sap:VirtualizedContainerService.HintSize="546,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_233" UnSafe="False" WorkflowFileName="BKAM\Navigation_BKAM.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_BKAM - Invoke Workflow File (BKAM\Navigation_BKAM.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_233" UnSafe="False" WorkflowFileName="BKAM\Navigation_BKAM.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_URL">[in_URL_BKAM]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_TMP_MarcheSecondaire - Invoke Workflow File (BKAM\Telechargement_TMP_MarcheSecondaire.xaml)" sap:VirtualizedContainerService.HintSize="546,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_235" UnSafe="False" WorkflowFileName="BKAM\Telechargement_TMP_MarcheSecondaire.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Telechargement_TMP_MarcheSecondaire - Invoke Workflow File (BKAM\Telechargement_TMP_MarcheSecondaire.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_235" UnSafe="False" WorkflowFileName="BKAM\Telechargement_TMP_MarcheSecondaire.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_TMP">[in_Chemin_Archive_TMP]</InArgument>
@@ -4043,20 +4062,20 @@
         <OutArgument x:TypeArguments="x:String" x:Key="out_FileName">[File_TMP_Csv]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lecture_Fichier_TMP - Invoke Workflow File (BKAM\Lecture_Fichier_TMP.xaml)" sap:VirtualizedContainerService.HintSize="546,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_234" UnSafe="False" WorkflowFileName="BKAM\Lecture_Fichier_TMP.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lecture_Fichier_TMP - Invoke Workflow File (BKAM\Lecture_Fichier_TMP.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_234" UnSafe="False" WorkflowFileName="BKAM\Lecture_Fichier_TMP.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_CHemin_CSV">[File_TMP_Csv]</InArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT_TMP">[DT_TMP]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[CHemin_OB]">
+    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[CHemin_OB]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,832" sap2010:WorkflowViewState.IdRef="Sequence_40">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,804" sap2010:WorkflowViewState.IdRef="Sequence_40">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="DT" />
             </Sequence.Variables>
@@ -4065,8 +4084,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Bonds]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="Bonds" />
-            <ui:FilterDataTable DataTable="[DT_Bonds]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[DT_Bonds]" SelectColumnsMode="Remove">
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Bonds]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="Bonds" />
+            <ui:FilterDataTable DataTable="[DT_Bonds]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="382,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[DT_Bonds]" SelectColumnsMode="Remove">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -4090,7 +4109,7 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <ui:FilterDataTable DataTable="[DT_Bonds]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[DT_Bonds_AE]" SelectColumnsMode="Keep">
+            <ui:FilterDataTable DataTable="[DT_Bonds]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="382,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[DT_Bonds_AE]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -4105,14 +4124,14 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <ui:RemoveDataRow Row="{x:Null}" DataTable="[DT_Bonds_AE]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="354,218" sap2010:WorkflowViewState.IdRef="RemoveDataRow_2" RowIndex="0" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Bonds_AE]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:RemoveDataRow Row="{x:Null}" DataTable="[DT_Bonds_AE]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="RemoveDataRow_2" RowIndex="0" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Bonds_AE]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_41">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4146,13 +4165,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_CHemin_AL2_Archive.TrimEnd(&quot;\&quot;c) + &quot;\&quot; + Date_JJMMYY +&quot;\AE L42.xlsm&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_CHemin_AL2_Archive.TrimEnd(&quot;\&quot;c) + &quot;\&quot; + Date_JJMMYY +&quot;\AE L42.xlsm&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1347" sap2010:WorkflowViewState.IdRef="Sequence_37">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1319" sap2010:WorkflowViewState.IdRef="Sequence_37">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="DT_Date" />
               <Variable x:TypeArguments="sd:DataTable" Name="DT_TMP_Date" />
@@ -4163,10 +4182,10 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BuildDataTable DataTable="[DT_Date]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Datetime.ParseExact(Date_JJMMYY,&quot;ddMMyy&quot;,System.Globalization.CultureInfo.InvariantCulture).ToString(&quot;MM/dd/yyyy&quot;),&quot;&quot;}]" DataTable="[DT_Date]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,218" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Date]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="0.75%" StartingCell="K1" />
-            <ui:FilterDataTable DataTable="[DT_TMP]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_TMP_Date]" SelectColumnsMode="Keep">
+            <ui:BuildDataTable DataTable="[DT_Date]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Datetime.ParseExact(Date_JJMMYY,&quot;ddMMyy&quot;,System.Globalization.CultureInfo.InvariantCulture).ToString(&quot;MM/dd/yyyy&quot;),&quot;&quot;}]" DataTable="[DT_Date]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Date]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="0.75%" StartingCell="K1" />
+            <ui:FilterDataTable DataTable="[DT_TMP]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="382,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_TMP_Date]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -4178,8 +4197,8 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_TMP_Date]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="0.75%" StartingCell="C2" />
-            <ui:FilterDataTable DataTable="[DT_TMP]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[DT_TMP_Rate]" SelectColumnsMode="Keep">
+            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_TMP_Date]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="0.75%" StartingCell="C2" />
+            <ui:FilterDataTable DataTable="[DT_TMP]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="382,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[DT_TMP_Rate]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -4191,9 +4210,9 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
-            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_TMP_Rate]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_3" SheetName="0.75%" StartingCell="E2" />
-            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Bonds_AE]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="354,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="0.75%" StartingCell="J11" />
-            <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_AE_L42]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="J9:O9" SheetName="0.75%" />
+            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_TMP_Rate]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_3" SheetName="0.75%" StartingCell="E2" />
+            <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Bonds_AE]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="0.75%" StartingCell="J11" />
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_AE_L42]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="J9:O9" SheetName="0.75%" />
           </Sequence>
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
@@ -4204,7 +4223,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Sequence DisplayName="traitement Fichier stressTest" sap:VirtualizedContainerService.HintSize="546,558" sap2010:WorkflowViewState.IdRef="Sequence_44">
+    <Sequence DisplayName="traitement Fichier stressTest" sap:VirtualizedContainerService.HintSize="518,530" sap2010:WorkflowViewState.IdRef="Sequence_44">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DT_Change" />
         <Variable x:TypeArguments="sd:DataTable" Name="DT_OPT" />
@@ -4221,25 +4240,25 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,629" sap2010:WorkflowViewState.IdRef="Sequence_47">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,573" sap2010:WorkflowViewState.IdRef="Sequence_47">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,541" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,513" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,249" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,221" sap2010:WorkflowViewState.IdRef="Sequence_46">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4266,19 +4285,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[Chemin_SPOTOFF]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[Chemin_SPOTOFF]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_50">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="Sequence_50">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_SPOTOFF]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="A5" SheetName="Reuters Kondor+ Sheet 1" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_SPOTOFF]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="A5" SheetName="Reuters Kondor+ Sheet 1" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
@@ -4289,19 +4308,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_10" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[Chemin_EQ]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_10" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[Chemin_EQ]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_61">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="Sequence_61">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Equities]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_12" Range="A5" SheetName="Equities" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Equities]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_12" Range="A5" SheetName="Equities" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
@@ -4312,19 +4331,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[Chemin_MID]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[Chemin_MID]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_62">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="Sequence_62">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[Dt_MID]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_13" Range="A6" SheetName="historique cours reval" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[Dt_MID]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_13" Range="A6" SheetName="historique cours reval" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
@@ -4335,20 +4354,20 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_POS_Ch_OPT]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_POS_Ch_OPT]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,263" sap2010:WorkflowViewState.IdRef="Sequence_51">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,235" sap2010:WorkflowViewState.IdRef="Sequence_51">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Change]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" Range="A7" SheetName="[in_FeuilleChange]" />
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_OPT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" Range="A7" SheetName="[in_FeuilleOPT]" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Change]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" Range="A7" SheetName="[in_FeuilleChange]" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_OPT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" Range="A7" SheetName="[in_FeuilleOPT]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
@@ -4359,20 +4378,20 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_Chemin_Bilan_BAM]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_Chemin_Bilan_BAM]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,263" sap2010:WorkflowViewState.IdRef="Sequence_49">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,235" sap2010:WorkflowViewState.IdRef="Sequence_49">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Bilan_BAM_POS]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="J7:K23" SheetName="[in_Feuille_BAM]" />
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Bilan_BAM_MID]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="N7:N23" SheetName="[in_Feuille_BAM]" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Bilan_BAM_POS]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="J7:K23" SheetName="[in_Feuille_BAM]" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Bilan_BAM_MID]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="N7:N23" SheetName="[in_Feuille_BAM]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
@@ -4383,19 +4402,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_Chemin_ClotureEquity_TCP]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_Chemin_ClotureEquity_TCP]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_52">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="Sequence_52">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[Dt_ClotureEquity_TCP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" Range="A1" SheetName="[in_Feuille_ClotureEquity]" />
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[Dt_ClotureEquity_TCP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" Range="A1" SheetName="[in_Feuille_ClotureEquity]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
@@ -4406,13 +4425,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,3413" sap2010:WorkflowViewState.IdRef="Sequence_45">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,2729" sap2010:WorkflowViewState.IdRef="Sequence_45">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="DT_Action_TCP" />
                 <Variable x:TypeArguments="sd:DataTable" Name="DT_Mapping" />
@@ -4423,7 +4442,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_1" Range="A1" SheetName="[in_NouvelleDate_JJ_MM_YYYY]">
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_1" Range="A1" SheetName="[in_NouvelleDate_JJ_MM_YYYY]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4431,7 +4450,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelSelectRange>
-              <ui:ExcelWriteCell Cell="A2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="[in_NouvelleDate_JJ_MM_YYYY]" Text="[Date.ParseExact(in_NouvelleDate_JJ_MM_YYYY,&quot;dd-MM-yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture).tostring(&quot;MM/dd/yyyy&quot;)]">
+              <ui:ExcelWriteCell Cell="A2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="[in_NouvelleDate_JJ_MM_YYYY]" Text="[Date.ParseExact(in_NouvelleDate_JJ_MM_YYYY,&quot;dd-MM-yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture).tostring(&quot;MM/dd/yyyy&quot;)]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4439,7 +4458,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteCell>
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_2" Range="A1" SheetName="pos change">
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_2" Range="A1" SheetName="pos change">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4447,7 +4466,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelSelectRange>
-              <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="530,165" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A7:J70" SheetName="pos change" ShiftCells="False" ShiftOption="ShiftUp">
+              <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A7:J70" SheetName="pos change" ShiftCells="False" ShiftOption="ShiftUp">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4455,7 +4474,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelDeleteRange>
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Change]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_5" SheetName="pos change" StartingCell="G7">
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Change]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_5" SheetName="pos change" StartingCell="G7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4463,7 +4482,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteRange>
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_OPT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_6" SheetName="pos change" StartingCell="A7">
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_OPT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_6" SheetName="pos change" StartingCell="A7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4471,7 +4490,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteRange>
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_3" Range="A1" SheetName="bilan bam">
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_3" Range="A1" SheetName="bilan bam">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4479,7 +4498,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelSelectRange>
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Bilan_BAM_POS]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_7" SheetName="bilan bam" StartingCell="B6">
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Bilan_BAM_POS]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_7" SheetName="bilan bam" StartingCell="B6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4487,8 +4506,8 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteRange>
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Bilan_BAM_MID]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_8" SheetName="bilan bam" StartingCell="D6" />
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_4" Range="A1" SheetName="Action-TCP">
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Bilan_BAM_MID]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_8" SheetName="bilan bam" StartingCell="D6" />
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_4" Range="A1" SheetName="Action-TCP">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4496,9 +4515,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelSelectRange>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Action_TCP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_11" Range="A11" SheetName="Action-TCP" />
-              <ui:ReadRange AddHeaders="True" DataTable="[DT_Mapping]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="Mapping" WorkbookPath="[in_chemin_Mapping]" />
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Mapping]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Action_TCP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_11" Range="A11" SheetName="Action-TCP" />
+              <ui:ReadRange AddHeaders="True" DataTable="[DT_Mapping]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="Mapping" WorkbookPath="[in_chemin_Mapping]" />
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Mapping]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
@@ -4548,7 +4567,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Action_TCP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Action_TCP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
@@ -4638,8 +4657,8 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Action_TCP]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_9" SheetName="Action-TCP" StartingCell="A11" />
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_5" Range="A1" SheetName="PosOff">
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Action_TCP]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_9" SheetName="Action-TCP" StartingCell="A11" />
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_5" Range="A1" SheetName="PosOff">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4647,8 +4666,8 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelSelectRange>
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_SPOTOFF]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_11" SheetName="PosOff" StartingCell="A5" />
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_6" Range="A1" SheetName="Action">
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_SPOTOFF]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_11" SheetName="PosOff" StartingCell="A5" />
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_6" Range="A1" SheetName="Action">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4656,9 +4675,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelSelectRange>
-              <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="530,165" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A9:AA50" SheetName="Action" ShiftCells="False" ShiftOption="ShiftUp" />
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Equities]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_12" SheetName="Action" StartingCell="A9" />
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_7" Range="A1" SheetName="Taux devises">
+              <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A9:AA50" SheetName="Action" ShiftCells="False" ShiftOption="ShiftUp" />
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Equities]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_12" SheetName="Action" StartingCell="A9" />
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_7" Range="A1" SheetName="Taux devises">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4666,14 +4685,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelSelectRange>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Devises]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_14" Range="V2:W39" SheetName="Taux devises" />
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Devises]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,713" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Devises]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_14" Range="V2:W39" SheetName="Taux devises" />
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Devises]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,517" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,489" sap2010:WorkflowViewState.IdRef="Sequence_63">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Object" Name="Mid_Reval" />
                       </Sequence.Variables>
@@ -4710,14 +4729,14 @@
                 </ui:ForEachRow.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Devises]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_13" SheetName="Taux devises" StartingCell="V2" />
-              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_10" Range="A1" SheetName="[in_NouvelleDate_JJ_MM_YYYY]" />
-              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_AE_L42]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="530,111" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_16" SheetName="[in_NouvelleDate_JJ_MM_YYYY]" StartingCell="B42" />
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_Devises]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_13" SheetName="Taux devises" StartingCell="V2" />
+              <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="382,92" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_10" Range="A1" SheetName="[in_NouvelleDate_JJ_MM_YYYY]" />
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[DT_AE_L42]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="382,111" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_16" SheetName="[in_NouvelleDate_JJ_MM_YYYY]" StartingCell="B42" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
