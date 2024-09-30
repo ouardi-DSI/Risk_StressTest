@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153,1429</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>747,1429</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Navigation_2_D_GBP_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -173,7 +173,7 @@
         </ui:CursorPosition>
       </ui:ClickImage.CursorPosition>
       <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAQCAYAAABN0MIqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADBSURBVFhH7ZRLCsMwDER9/0u2kK3v4BKCwjBIsmRnEagWD1ujnxlIWu99FBft+zlGcVFmAGUGUGYAZQYQMqO1dqPlNbBn1mfVen1ebpWpGbw0+ohM38qO6DsypD+T6CO0OquXdYlRP+8ca/cdXmMGgjqemoa5XcJmnEt5sWgI5rDW0jRdYp7nxU8Q/oFquofWY81hXWJvhlezSvoHGoX7vDlWLZ8zbZeQGYxWx2R6OC8x6jzHuiPpek38V8qMm2P8AHpTPymNJGFMAAAAAElFTkSuQmCC" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAaCAYAAAAzBZtTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD1SURBVGhD7ZXBDsIgEET5Y/WLNemVf6jhgFmnyxZIh8Q4h5d2h10q7yDp9dx2wUOCyUgwmYPgnLOY5H57fLksuIIxE31IMBkJJiPBZCSYDFVwSumDt+5hZ87mWr3RXLTGgCYYD9J7sJG5mW/0/o6rWPYX0Xswr681i3mtbV7esfbeWfy8YIvN7dPL7BoTuuByEDxMzSx2zfa2Mi+vNe4X1Wzol5yXR3gzrX0wr3W0R9TDYNkl1wvORfu0evF5ljGhCka8PmRkBtdrbXPcp/VuGe2PWHbJ/SsSTEaCyUgwGQkm0yW4NIl50OdBsLgWCSYjwVS2/Q2NnP4fgNPbHAAAAABJRU5ErkJggg==" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="55fffcf7-7612-48f1-8bf7-e788d7db670d" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="[in_Timeout]">

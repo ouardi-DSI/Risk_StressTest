@@ -99,15 +99,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_2_D_JPY</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Interest'" Found="[JPY_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+    <ui:ImageFound ContinueOnError="{x:Null}" DisplayName="Image Exists 'xmanager.exe Interest'" Found="[JPY_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1" Result="{x:Null}">
       <ui:ImageFound.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVEhL7Y9LCoAwDAVzY/XECm5zh2gDSlJbISURF1kM/eS1w4Nt3SmalJiAeVooGpYgYii3pFXTi5SYeJUAgNpLWhmJylgkIzM+/04ikblrLlc1G21S84mk0Ms8JL2PXSV8eYbrB+4Sb1JigiXRQGkRC9IBb1vLQLout5kAAAAASUVORK5CYII=" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVEhL7Y9LCoAwDAVzY/XECm5zh2gDSlJbISURF1kM/eS1w4Nt3SmalJiAeVooGpYgYii3pFXTi5SYeJUAgNpLWhmJylgkIzM+/04ikblrLlc1G21S84mk0Ms8JL2PXSV8eYbrB+4Sb1JigiXRQGkRC9IBb1vLQLout5kAAAAASUVORK5CYII=" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ce9a414-cd9e-4360-b6a4-67c87cb56ee6" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="3000">
@@ -117,7 +117,7 @@
         </ui:Target>
       </ui:ImageFound.Target>
     </ui:ImageFound>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not JPY_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile Condition="[not JPY_Existe]" CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="{x:Null}">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,405" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -125,7 +125,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition OffsetX="-10" OffsetY="10" Position="TopRight" />
             </ui:ClickImage.CursorPosition>
@@ -140,9 +140,9 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Interest'" Found="[JPY_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_7">
+          <ui:ImageFound ContinueOnError="{x:Null}" DisplayName="Image Exists 'xmanager.exe Interest'" Found="[JPY_Existe]" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="ImageFound_7" Result="{x:Null}">
             <ui:ImageFound.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVEhL7Y9LCoAwDAVzY/XECm5zh2gDSlJbISURF1kM/eS1w4Nt3SmalJiAeVooGpYgYii3pFXTi5SYeJUAgNpLWhmJylgkIzM+/04ikblrLlc1G21S84mk0Ms8JL2PXSV8eYbrB+4Sb1JigiXRQGkRC9IBb1vLQLout5kAAAAASUVORK5CYII=" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVEhL7Y9LCoAwDAVzY/XECm5zh2gDSlJbISURF1kM/eS1w4Nt3SmalJiAeVooGpYgYii3pFXTi5SYeJUAgNpLWhmJylgkIzM+/04ikblrLlc1G21S84mk0Ms8JL2PXSV8eYbrB+4Sb1JigiXRQGkRC9IBb1vLQLout5kAAAAASUVORK5CYII=" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ce9a414-cd9e-4360-b6a4-67c87cb56ee6" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Position Report' /&gt;" TimeoutMS="3000">
@@ -161,7 +161,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="450,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:ClickImage ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="450,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}">
       <ui:ClickImage.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -183,7 +183,7 @@
         </ui:Target>
       </ui:ClickImage.Target>
     </ui:ClickImage>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="450,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="450,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_2_D_JPY</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
