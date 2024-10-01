@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Copie_Fichier_From_Kondor_To_Local" sap:VirtualizedContainerService.HintSize="496,899" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Copie_Fichier_From_Kondor_To_Local" sap:VirtualizedContainerService.HintSize="900,946" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -130,6 +130,7 @@
         <InArgument x:TypeArguments="x:String">[in_chemin_Archive.TrimEnd("\"c) +"\" + in_Date_JJMMYYYY+ "\"+ in_Chemin_Fichier_Kondor.split("\"c).Last]</InArgument>
       </Assign.Value>
     </Assign>
+    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[in_Chemin_Fichier_Kondor]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="434,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Copie_Fichier_From_Kondor_To_Local</InArgument>
