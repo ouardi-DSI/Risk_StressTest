@@ -44,6 +44,8 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -95,9 +97,17 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>WindowsFormsIntegration</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1213,730" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="917,730.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,9 +231,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="209,182" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="556,1523" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="534,863" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="510,1051" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -231,13 +241,16 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="496,613" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="472,801" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="StepWorkflow" />
+                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_25">
+                      <Assign DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="438,114" sap2010:WorkflowViewState.IdRef="Assign_25">
                         <Assign.To>
                           <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
                         </Assign.To>
@@ -245,12 +258,44 @@
                           <InArgument x:TypeArguments="ui:BusinessRuleException">[Nothing]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="438,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Template_FXO_Simulation" />
+                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Template_FXO_Simulation">[config("chemin_Template_FXO_Simulation").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_FXO_Simulation_Archive">[config("chemin_FXO_Simulation_Archive").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CHemin_AL2_Archive">[config("CHemin_AL2_Archive").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Template_AEL2">[config("Chemin_Template_AEL2").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_URL_BKAM">[config("URL_BKAM").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Archive_TMP">[config("Chemin_Archive_TMP").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJMMYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJ_MM_YYYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_AncienneDAte_JJMMYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_AncieneeDate_JJ_MM_YYYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_StressTest_Archive">[config("chemin_StressTest_Archive").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_AncienneMois_FR">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouveauMois_FR">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_POS_Ch_OPT">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_FeuilleChange">[config("FeuilleChange").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_FeuilleOPT">[config("FeuilleOPT").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_BAM">[config("Feuille_BAM").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_ClotureEquity_TCP">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_ClotureEquity">[config("Feuille_ClotureEquity").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Mapping">[config("chemin_Mapping").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Bilan_BAM">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[StepWorkflow]</InOutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Archive">[config("Chemin_Archive").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CHemin_Kondor">[config("CHemin_Kondor").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[cint(config("Timeout").ToString)]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetry">[cint(config("NumberOfRetry").ToString)]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Formule_DerniereDate">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Formule_nouvelleDate">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CellFormule">[config("CellFormule").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_KVAR">[config("Chemin_KVAR").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_VAR_Archive">[config("chemin_VAR_Archive").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Template_VAR">[config("Chemin_Template_VAR").ToString]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="434,207" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="438,423" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                         <TryCatch.Try>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetTransactionStatus (Success)" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Framework\SetTransactionStatus.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
@@ -268,7 +313,7 @@
                           </ui:InvokeWorkflowFile>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -287,7 +332,7 @@
                     </Sequence>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="500,22" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Catch`1_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -443,7 +488,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="630,2900" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="232,102" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="584,2481" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
