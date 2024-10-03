@@ -90,13 +90,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Navigation_EQ_Deal" sap:VirtualizedContainerService.HintSize="900,879" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Navigation_EQ_Deal" sap:VirtualizedContainerService.HintSize="1196,1066" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Navigation_EQ_Deal" sap:VirtualizedContainerService.HintSize="450,856" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Navigation_EQ_Deal" sap:VirtualizedContainerService.HintSize="450,1043" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -108,7 +108,32 @@
           <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_RIGHT">
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:ClickImage.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:ClickImage.CursorPosition>
+        <ui:ClickImage.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQAAAAAaCAYAAABYSIIvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANnSURBVHhe7ZhRbhsxDET7kRvldr5U/nO0/rhhgAHG4yFFeZ3A6PIBhChyyNUWFbvun+swDKdlBsAwnJgZAMNwYmYADMOJmQEwDCfmZgB8fHz8qA3D8FrcfQHwRf0JfxiG12EGwDCcmO2fAG+XtztzOmcZ7+/vd8boHrh41iPgHNsOnbpKk9VV/RjuzaZUuQque6S+oup19DnPPGdF9pyIwyo0X9V1cozTrWh/AXx+fn5f9ljDEON4Vltd/iB7QZC9rIsxq/0unX6dM3RiGR2d69/FaXfqK6o+R5/xrDNWxDPcczRWnYVzVV03B1/1XVoDgC95oBrNB65Phju8vqRqNKZ50NF0ONJfNapzsYyVLssf7a/x2MOULOe0ADmt6/ZwNbE6PeIulwFt1o9xe1df1XVz8FXfZfkTAJc7zOXZ+EvAWYY7fPWSugbsZ3Q0GUf6u3Nm64qVLssf7c9x1TyaYyLntFqT9dBa3QOt1/0Kp696qp/lgkdy4at2h+UXwNvf29/7iAP2vzVf+iDTOPASbAz22RpojSM0zjp0dJmG4/CzdUXonAH2mSyudOpVU/Wu6piqJ/xufafXo7j6nedlufC7uYBjvKpuxXoA0OVfDQDo4QP2He7QHOMXdGvAfkZHk3Gkvztntq5Y6bL80f4cD1+NyXLwqxxwOV5hIPMDt4ft4mpcf1DlgtgjtpNjWBdUWqX8CaD/+sNUx/at+apzuQx3YPdC2Rqwz3Q0HY70d5psXbHScT78Z/XXvhmae2Zdt77qpVQ5h9NXz6tyyiM5xDlf9VHKL4C4zPGbHv8PAFjjfAwJwL7DHTh7oepFd/e7dPrtnCHzKzq66pkrnHbVj/fqZzllpa1qg27tbl/F6bvPCz/LBd0cg3hVW5EOAFz+y+Xy0ADI9I44sBrD+8wHqF/l2Hbo1FUajmV+BfqqKZpzGgfXwRxVnuOcd1rAeqeragPOq9btYbtkNVVPjmseOY0HVS7QeKXNsAMAFxiXP9bYR65jGBhaMwyPsvsXe+hxMwBwacP48u9+AQQ8BLj2VcH0dPabuOfDnoHrC3tVfuNs+mfB9j9zNwD40usXAOgMAPg8CIZheC1uBkB2+XGJ41IfsWEYXou7/wMYhuE8zAAYhhMzA2AYTswMgGE4MTMAhuG0XK//AMPTg99GjHNUAAAAAElFTkSuQmCC" />
+        </ui:ClickImage.Image>
+        <ui:ClickImage.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="54bcefb0-5015-4bfd-bff6-9571d31c69bb" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Market' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:ClickImage.Target>
+      </ui:ClickImage>
+      <ui:ClickImage ContinueOnError="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="1000" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_RIGHT">
         <ui:ClickImage.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -133,7 +158,7 @@
           </ui:Target>
         </ui:ClickImage.Target>
       </ui:ClickImage>
-      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="[cint(in_Timeout/3)]" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage ContinueOnError="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="[cint(in_Timeout/3)]" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:ClickImage.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -145,7 +170,7 @@
           </ui:CursorPosition>
         </ui:ClickImage.CursorPosition>
         <ui:ClickImage.Image>
-          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAQCAYAAACxxengAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVFhH7ZTBCcAwDAO7k0fuEh0iO6WvUCMcV037qEGPAwkneRzB2360Lu6RKBKJIpEoklSUmYVkZzGPPnJVKFHRDJmdffLGn3klys+jjPi71VgW5WcjY8dcmeUd5TP2Wa7MJz8K+yxXRqJItKNIlneUn2c56hVJRYkLiSKRKIrWT6EU9prq9ID7AAAAAElFTkSuQmCC" />
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAQCAYAAACxxengAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVFhH7ZTBCcAwDAO7k0fuEh0iO6WvUCMcV037qEGPAwkneRzB2360Lu6RKBKJIpEoklSUmYVkZzGPPnJVKFHRDJmdffLGn3klys+jjPi71VgW5WcjY8dcmeUd5TP2Wa7MJz8K+yxXRqJItKNIlneUn2c56hVJRYkLiSKRKIrWT6EU9prq9ID7AAAAAElFTkSuQmCC" />
         </ui:ClickImage.Image>
         <ui:ClickImage.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="20b7625e-8843-455c-8b5b-392a7846ac35" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Market' /&gt;">

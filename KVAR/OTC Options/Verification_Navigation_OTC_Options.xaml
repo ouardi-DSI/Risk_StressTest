@@ -93,7 +93,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verification_Navigation_EQ_Deal" sap:VirtualizedContainerService.HintSize="900,1262" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verification_Navigation_EQ_Deal" sap:VirtualizedContainerService.HintSize="1196,1262" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -116,7 +116,7 @@
       </ui:InvokeWorkflowFile>
       <ui:UiElementExists DisplayName="Element Exists 'xmanager.exe Risk'" Exists="[Eq_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a8c6a5d-d91f-4cd2-9001-c22ec29c6676" InformativeScreenshot="2c6702efd9038604b0e0005ee8b044bf" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Assumption: BMCE_COM_OPT_Deal-by-Ins_10d99%' /&gt;" TimeoutMS="[in_Timeout*2]">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a8c6a5d-d91f-4cd2-9001-c22ec29c6676" InformativeScreenshot="2c6702efd9038604b0e0005ee8b044bf" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='*Risk Assumption: BMCE_COM_OPT_Ins-by-PC_10d99%MC*' /&gt;" TimeoutMS="[in_Timeout*2]">
             <ui:Target.WaitForReady>
               <InArgument x:TypeArguments="ui:WaitForReady" />
             </ui:Target.WaitForReady>

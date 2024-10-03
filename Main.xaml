@@ -107,7 +107,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="917,730.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="807,755.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -266,33 +266,34 @@
                           <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Template_AEL2">[config("Chemin_Template_AEL2").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_URL_BKAM">[config("URL_BKAM").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Archive_TMP">[config("Chemin_Archive_TMP").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJMMYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJ_MM_YYYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_AncienneDAte_JJMMYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_AncieneeDate_JJ_MM_YYYY">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJMMYY">[TransactionItem.SpecificContent("NouvelleDate_JJMMYY").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJ_MM_YYYY">[TransactionItem.SpecificContent("NouvelleDate_JJ_MM_YYYY").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_AncienneDAte_JJMMYY">[TransactionItem.SpecificContent("DerniereDate_JJMMYY").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_AncieneeDate_JJ_MM_YYYY">[TransactionItem.SpecificContent("DerniereDate_JJ_MM_YYYY").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_chemin_StressTest_Archive">[config("chemin_StressTest_Archive").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_AncienneMois_FR">[TransactionItem.SpecificContent("").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_NouveauMois_FR">[TransactionItem.SpecificContent("").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_POS_Ch_OPT">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_AncienneMois_FR">[TransactionItem.SpecificContent("DerniereDate_Mois_FR").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouveauMois_FR">[TransactionItem.SpecificContent("NouvelleDate_Mois_FR").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_chemin_POS_Ch_OPT">[TransactionItem.SpecificContent("Chemin POS").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_FeuilleChange">[config("FeuilleChange").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_FeuilleOPT">[config("FeuilleOPT").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_BAM">[config("Feuille_BAM").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_ClotureEquity_TCP">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_ClotureEquity_TCP">[TransactionItem.SpecificContent("CHemin Cloture equity").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Feuille_ClotureEquity">[config("Feuille_ClotureEquity").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Mapping">[config("chemin_Mapping").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Bilan_BAM">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Bilan_BAM">[TransactionItem.SpecificContent("Chemin Bilan BAM").ToString]</InArgument>
                           <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[StepWorkflow]</InOutArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Archive">[config("Chemin_Archive").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_CHemin_Kondor">[config("CHemin_Kondor").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[cint(config("Timeout").ToString)]</InArgument>
                           <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetry">[cint(config("NumberOfRetry").ToString)]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_Formule_DerniereDate">[TransactionItem.SpecificContent("").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_Formule_nouvelleDate">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Formule_DerniereDate">[TransactionItem.SpecificContent("DerniereDate_Fomule_StressTest").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Formule_nouvelleDate">[TransactionItem.SpecificContent("NouvelleDate_Formule_StressTest").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_CellFormule">[config("CellFormule").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_KVAR">[config("Chemin_KVAR").ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[TransactionItem.SpecificContent("").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[TransactionItem.SpecificContent("NouvelleDate_YYYY_MM_JJ").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_chemin_VAR_Archive">[config("chemin_VAR_Archive").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Template_VAR">[config("Chemin_Template_VAR").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Indices_To_Remove_Sensibility">[config("Indices_To_Remove_Sensibility").ToString]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                       <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="438,423" sap2010:WorkflowViewState.IdRef="TryCatch_10">
@@ -401,7 +402,7 @@
                         </Sequence>
                       </ActivityAction>
                     </Catch>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Catch`1_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -412,7 +413,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="476.8,548" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="468,477" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -490,7 +491,7 @@
                   <Transition.To>
                     <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="232,102" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="584,2481" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="564,2600" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -498,7 +499,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="546,2254" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="518,2373" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -513,7 +514,7 @@
                                   <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="484,1619" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="484,1766" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -522,22 +523,30 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="416,1304" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="416,1451" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="ConfigFile" />
+                                    </Sequence.Variables>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="382,173" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+                                    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Config_SDM_Stresstest" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+                                      <ui:GetRobotAsset.Value>
+                                        <OutArgument x:TypeArguments="x:String">[ConfigFile]</OutArgument>
+                                      </ui:GetRobotAsset.Value>
+                                    </ui:GetRobotAsset>
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">[ConfigFile]</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
                                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="354,174" sap2010:WorkflowViewState.IdRef="If_10">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="382,174" sap2010:WorkflowViewState.IdRef="If_10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -556,7 +565,7 @@
                                         </Assign>
                                       </If.Then>
                                     </If>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="354,174" sap2010:WorkflowViewState.IdRef="If_12">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="382,174" sap2010:WorkflowViewState.IdRef="If_12">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

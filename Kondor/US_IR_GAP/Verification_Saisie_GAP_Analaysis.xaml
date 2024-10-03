@@ -45,6 +45,7 @@
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,6 +89,7 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Verification_Saisie_GAP_Analaysis" sap:VirtualizedContainerService.HintSize="900,1815" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -147,7 +149,7 @@
           </ui:LogMessage>
           <ui:UiElementExists DisplayName="Element Exists 'xmanager.exe  Warning'" Exists="[Warning_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9412cec-2314-43f3-8df8-02ac0acdd01d" InformativeScreenshot="edf7f2cb2987b260d910755daaf5f181" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Warning' /&gt;" TimeoutMS="5000">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9412cec-2314-43f3-8df8-02ac0acdd01d" InformativeScreenshot="edf7f2cb2987b260d910755daaf5f181" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Warning' /&gt;" TimeoutMS="[cint(in_Timeout/8)]">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
