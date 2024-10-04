@@ -97,7 +97,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Navigation_OTC_Options" sap:VirtualizedContainerService.HintSize="450,1109" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Navigation_Trading_Compte_Propre" sap:VirtualizedContainerService.HintSize="450,1109" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="Edit_Existe" />
       </Sequence.Variables>
@@ -108,7 +108,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_OTC_Options</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_Trading_Compte_Propre</InArgument>
           <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
@@ -124,10 +124,10 @@
           </ui:CursorPosition>
         </ui:ClickImage.CursorPosition>
         <ui:ClickImage.Image>
-          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ4AAAAVCAYAAAC31wBJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANpSURBVHhe7ZhRjhpBDETzwY24HZfin6Plh6yRSqqYKrd7RrsJkp9ktdsuu6clsAZ+PYdhGDaZwTEMwzYzOIZh2EYOjvv9/q02DMNnY984+Av+Hf4wDJ/LDI5hGLY5/FPlcru8mdIpc1yv1zdj8h6ouOsRcI5th05dpXF1VT/F6oxsQOVgKzqaXc725OeHKVb5FWf75nxV18kxTqeoeroaZvuN4/F4vIZErGGIcdzVVkMjcJcB6lIuxqz2u3T6dZ6hE6tQ9Yzq1Y1V7Oo7nO3ZuddqvyL0R85hOFfVdXPwsx5EPOdcjMn7zNbg4OEQZE3OB6qPQz0sx8JXF8waRUfT4Uz/rMk6FXM4HceVphurUGfE6nq7HIN81uY610fFqz7AxTPQrc4J1F7VV3XdHPysBxHPuRyrah3tnyoYCmEqz8ZvHsoc6kHVBd0asO/oaBxn+qvndOsKp+O40nRjFfmMvAe5b94zrk+3h4qrfmdZnRO4c8N3ueBILvysZZBza1DVO9pvHJfff/+fgThg/6X50gdOo4gLZGOwd2uQaxShUdaho3MajsN36wqn43j42RQu7mB9rq1yFZ0+Vb/IZWPy/iiqT3VWNxd+NxdwjFelq9Yg13ToDw4aGqvBAT18wL5CXUBd0K0B+46OxnGmv3pOt65wOo6f7eWozlB7GHAxRuV4hQH2Fat8F9Unx6rnUnvEdnIM6wLluzVgv0vrp0p+24BlHdtL81Wncg51AXVBtwbsMx1NhzP9lcatK5yO42d7Oaozql47OXXG0d6By6/qMkqfY7yvcpkjOcQ5r3y3BuwzLh603jhiCMR/FvifA7BG+RgugH2FelB3QecHu/tdOv12nsH5K3bOqNg5M2B9dWaVy0TuaG2wyge7PRWqpuqbfZcLujkGcVfb8YPVPrMcHBgat9vt0OBwekU8bDaG984HqF/l2Hbo1FUajjm/A/qrum6vI2eCXKv2sArknbZbvwL9u/qMq6v6cjznkcvxoMoFOa60vHc+QL3KZcrBgS8+hkassY9cxzBocs0w7NL5MA8/hxwc+LKH8dDYfeMIeHhw7f8KT91sP4k6H/bdqDNh/4KfODffk214xw4OHhb5jQN0Bgd8HiDDMHw2cnC4oYEvfwyDMzYMw2dj/+MYhmFwzOAYhmGT5/MP/ybuk48Bv7kAAAAASUVORK5CYII=" />
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQEAAAAaCAYAAAC3iukRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANfSURBVHhe7ZhRbtwwDET7kRvldnup/Odo/dmGAQaYcmcoyt4EC5gPIESRQ8oqasKbP/dhGC7NDIFhuDgzBIbh4swQGIaLM0NgGC7ODIFhuDgPQ+Dj4+NHbRiG10J+CfDL+hP+MAyvwwyBYbg4h34OvN3eHkzplDne398fjMl7oOKuR8A5th06dZXG1VX9FNUZAecqHYCG7VlUvc6e88znrHDnRBxWkfNVXSfHKF2XrS+Bz8/P7xc+1jDEOO5qqwEQuMsCd3EVY1b7XTr9Os/QiVWoeob33b5K161dUfU5e8aznrEizlDn5Fj1LJyr6ro5+Fm/S3sI8IseZE3OB6qPQ10kXzhrciznQUfT4Uz/rMk6FXM4HeLolW2F0+R41dPllBYgl+u6PVRNrEqPuMo5oHX9GLVX9VVdNwc/63dp/RzACx6m8mz8RaDMoS5SXTivAfuOjsZxpr96TreucDqOO79it29wNMdETmlzjeuRa/Me5Pq8X6H0Vc/su1xwJBd+1h6h9SXw9vf/3/+IA/a/NV/6wGkUuBAbg71bg1yjCI2yDh2d03AcvltXOB3HnV+x2zeoeld1TNUTfre+0+soqn7nPJcLv5sLOMZr1nXpDQEaAKshAD18wL5CXYBjfFm1Buw7OhrHmf7qOd26wuk47vyKbt9sjMvBr3JA5XiFAecHag/bRdWo/qDKBbFHbCfHsC6otI7lz4H8FQDLOrZvzVedyjnUw6vLuTVgn+loOpzprzRuXeF0HHd+xW7fTM49s65bX/XKVDmF0lfnVbnMkRzinK/6OJZfAvFCx298/F0AsEb5GBSAfYV6eHe56tK7+106/Xaewfkrjp5RoXRHzwnf5TIrbVUbdGt3+2aUvnte+C4XdHMM4lVth3IIYADcbrdDQ8DpFfHw2RjeOx+gfpVj26FTV2k45vwO6K/qjvTlfjBFlec455UWsF7pqtqA81mr9rBdXE3Vk+M5j1yOB1UuyPFKu8IOAbzEGACxxj5yHcPQyDXDsMvR/9xDj4chgBc3jAfA7pdAwIOAa18VTFNlv4k6H3YG1Q/2qvzGs+V/C7YrIIcAv/j5SwB0hgB8HgbDMLwWD0PADQC8yPFin7FhGF4L+TeBYRiuwwyBYbg4MwSG4eLMEBiGS3O//wMs5/KjikgrfAAAAABJRU5ErkJggg==" />
         </ui:ClickImage.Image>
         <ui:ClickImage.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a3c87fa-6e7a-405d-b94c-26feb3943e97" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Market' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="54bcefb0-5015-4bfd-bff6-9571d31c69bb" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Market' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -137,7 +137,7 @@
           </ui:Target>
         </ui:ClickImage.Target>
       </ui:ClickImage>
-      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_RIGHT">
+      <ui:ClickImage ContinueOnError="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="1000" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_RIGHT">
         <ui:ClickImage.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -149,7 +149,7 @@
           </ui:CursorPosition>
         </ui:ClickImage.CursorPosition>
         <ui:ClickImage.Image>
-          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ8AAAAZCAYAAAAv16sMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOCSURBVHhe7ZhBblsxDES7yI1yO1/K+xytmyQ0QGBKz1CUPpK2wTyAEEUOqS/AJr79690YYw7w8DDGHOHhYYw5wsPDGHOEh4cx5oin4XG/37/UjDE/A/rmgV/yr/CNMf8/Hh7GmCOOfra83F6ejOmYKV5fX58MqfuExVWPAHNoO0zqOo2q6/oxVmdUS1gubcVEs8vVnvj8aYxVfsXVvjXf1U1yiNIxup6qhrH15vH29vYYFLGGZQzjqrYbHIG6UMIupmLIar/LpN/kGSaxDlaPsF7TWMeufsLVnpN7rfYrQn9yDoK5rm6aS7/qk4jXnIohda8YDw8cEEHV1HzA+ijYA2MsfHbJqmFMNBOu9K+aqmMxhdJhnGmmsQ52Rqyqt8ohma/aWqf6sHjXJ1HxSupW5wRsz+q7umku/apPIl5zNdbVrhj9bMnBEMbyaPgGwkzBHpZdUq0B+oqJRnGlP3tOta5QOowzzTTWUc+o+6T2rXtE9Zn2YHHW7yqrcwJ1bvgqF5zkwq9aJHNqDbr6FaM3j5fff/6/kfEE/YfmUx8oDSMuUQ3JvVqDWsMIDbMJE53SYDx9ta5QOoyHX42h4grU19ou1zHp0/WLXDWk7k9hfbqzprnwp7kAY7gyXbcGtWaH2fCAwbEaHqlPP0GfwS7BLqnWAH3FRKO40p89p1pXKB3Gr/ZSdGewfVqiYgjL4ZqWoM9Y5aewPjXWPRfbZ2wnh6AuYL5aA/R3Wf5sqW8daVWH9tB81rGcgl2CXVKtAfrIRDPhSn+mUesKpcP41V6K7oyu106OnXHaO1D5VV2F6WsM912ucpLLOOaZr9YAfUTFkeWbRwyC+A8j//dIUMP8HDAJ+gz2sOqSyg9297tM+u08g/JX7JzRsXNmgPruzC5XidxpbbDKB7s9Gaym61t9lQumOSTjqnbiB6u9oh0eOThut9vR8FB6RjxwNQT3yk+yfpVD22FS12kwpvwJ2Z/VTXudnJnUWrZP68i80k7rV2T/qb6i6rq+GK/5zNV40OWCGmda3Cs/yXqWU8jhkV/+HByxxj5yE8thU2uM2WXnA22+j6fhkV/4MBwcu28eAQ4QrP1Xwelb7Tth56d9NezMtL/Bd5xb74lmNHR44MCobx7JZHikj0PEGPMzeBoeanDkAIiBcMWMMT8D+p+HMcas8PAwxhzh4WGMOcLDwxhzwPv7BzidIl2Ctx/KAAAAAElFTkSuQmCC" />
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPkAAAAVCAYAAACEyUhpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM2SURBVHhe7ZdRbiNBCET3IzfK7Xyp/Odo++MNkUqqxVU0PeNY0YgnoaahoHui4LH/3IdhuDQz5MNwcWbIh+HizJAPw8V5GPKPj48ftWEYXot8k/Mw/oQ/DMPrmCEfhotz6Ov62+3twZROmeP9/f3BmLwHKu56BJxj26FTV2lcXdVPUZ0RcK7SAWjYnkXV6+w5z7xnhTsn4rCKnK/qOjlG6cDWm/zz8/N7oGMNQ4zjrrYa8MA9DHAPpmLMar9Lp1/nDp1YhapneN/tq3Td2hVVn7NnPOuOFXGGOifHqrtwrqrr5uBnfaY95DzIQdbkfKD6ONRF8wNlTY7lPOhoOpzpnzVZp2IOp0McvbKtcJocr3q6nNIC5HJdt4eqiVXpEVc5B7SuH6P2qr6q6+bgZ32m9XUdAxym8mz8RlfmUBetHiivAfuOjsZxpr+6p1tXOB3HnV+x2zc4mmMip7S5xvXItXkPcn3er1D6qmf2XS44kgs/axWtN/nb3/9/fyMO2P/WfOkDp1HgwmwM9m4Nco0iNMo6dHROw3H4bl3hdBx3fsVu36DqXdUxVU/43fpOr6Oo+p3zXC78bi7gGK9ZB3pDTgO+GnLo4QP2FeqCHOOHUWvAvqOjcZzpr+7p1hVOx3HnV3T7ZmNcDn6VAyrHKww4P1B72C6qRvUHVS6IPWI7OYZ1gdIuv67ntzgs69i+NV91KudQl1OXd2vAPtPRdDjTX2ncusLpOO78it2+mZx7Zl23vuqVqXIKpa/Oq3KZIznEOa+0yzd5DGz8xsbvcsAa5eODALCvUJdzl68eane/S6ffzh2cv+LoGRVKd/Sc8F0us9JWtUG3drdvRum754XvckE3xyBe1QblkGPAb7fboSF3ekVcLhvDe+cD1K9ybDt06ioNx5zfAf1V3ZG+3A+mqPIc57zSAtYrXVUbcD5r1R62i6upenI855HL8aDKBTleae2QY0gx4LHGPnIdw4dCrhmGXdw/79DjYcgxmGE84Ltv8oAHnWt/K/g0VPZK1PmwM6h+sN/KK+6W/xZsV0AOOQ92fpODzpDD52EfhuG1PAy5G3AMagzuGRuG4bXI3+TDMFyF+/0frH5UDT6H/OAAAAAASUVORK5CYII=" />
         </ui:ClickImage.Image>
         <ui:ClickImage.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="46eea366-3d0a-4af5-9bf4-fb75a0384309" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Market' /&gt;">
@@ -197,10 +197,10 @@
           </ui:ClickImage>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -302,7 +302,7 @@
       </If>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_OTC_Options</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Navigation_Trading_Compte_Propre</InArgument>
           <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>

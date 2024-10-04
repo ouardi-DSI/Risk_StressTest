@@ -101,13 +101,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="1196,2985" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="1196,3242" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="484,2962" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="492,3219" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:Image" Name="ScreenShot_EQDeal" />
         <Variable x:TypeArguments="x:String" Name="Ligne_Totale" />
@@ -118,27 +118,43 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="458,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Recuperation_Total_EQ</InArgument>
           <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'xmanager.exe Risk'" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[ScreenShot_EQDeal]">
-        <ui:TakeScreenshot.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="56fc6a20-816f-4577-82c4-ea1010f70bd4" InformativeScreenshot="7b9a4a63a65e13195c8a6450dd187b94" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' /&gt;&lt;ctrl name='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' role='client' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:TakeScreenshot.Target>
-      </ui:TakeScreenshot>
-      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[in_chemin_Archive.TrimEnd(&quot;\&quot;c) +&quot;\&quot; + in_Date_JJMMYYYY]" />
-      <ui:SaveImage DisplayName="Save Image" FileName="[in_chemin_Archive.TrimEnd(&quot;\&quot;c) +&quot;\&quot; + in_Date_JJMMYYYY +&quot;\EQ Deal.png&quot;]" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[ScreenShot_EQDeal]" />
-      <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="458,397" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="10" RetryInterval="00:00:01">
+        <ui:RetryScope.ActivityBody>
+          <ActivityAction>
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'xmanager.exe Risk'" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[ScreenShot_EQDeal]">
+                <ui:TakeScreenshot.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="56fc6a20-816f-4577-82c4-ea1010f70bd4" InformativeScreenshot="7b9a4a63a65e13195c8a6450dd187b94" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' /&gt;&lt;ctrl name='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' role='client' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TakeScreenshot.Target>
+              </ui:TakeScreenshot>
+            </Sequence>
+          </ActivityAction>
+        </ui:RetryScope.ActivityBody>
+        <ui:RetryScope.Condition>
+          <ActivityFunc x:TypeArguments="x:Boolean" />
+        </ui:RetryScope.Condition>
+      </ui:RetryScope>
+      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="458,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[in_chemin_Archive.TrimEnd(&quot;\&quot;c) +&quot;\&quot; + in_Date_JJMMYYYY]" />
+      <ui:SaveImage DisplayName="Save Image" FileName="[in_chemin_Archive.TrimEnd(&quot;\&quot;c) +&quot;\&quot; + in_Date_JJMMYYYY +&quot;\EQ Deal.png&quot;]" sap:VirtualizedContainerService.HintSize="458,165" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[ScreenShot_EQDeal]" />
+      <Assign sap:VirtualizedContainerService.HintSize="458,113" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[out_Chemin_Image_EQ_Deal]</OutArgument>
         </Assign.To>
@@ -146,7 +162,7 @@
           <InArgument x:TypeArguments="x:String">[in_chemin_Archive.TrimEnd("\"c) +"\" + in_Date_JJMMYYYY +"\EQ Deal.png"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Risk'" Found="[Totale_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+      <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Risk'" Found="[Totale_Existe]" sap:VirtualizedContainerService.HintSize="458,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
         <ui:ImageFound.Image>
           <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAQCAYAAABHjGx4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACRSURBVEhL7ZHRCcAwCES7U7brCN2gS2aFFD8EOXqNNYXS1AcHiYp6uNRaG2rd9jYbaXQ25UVn49JoKYXK4omjLPgXzmIjuC/KBnuWFnpxb58oQ0Z7y1t6tZhn9VHSKBJZ3uKJ2T/rHeV1oyjFvp8gL4qwwVfLWu7WsXyUYaOC5FQMzLFajWs/VBS30a/zE6OtHfFEPARPw35rAAAAAElFTkSuQmCC" />
         </ui:ImageFound.Image>
