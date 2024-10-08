@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Recuperation_Total_EQ" this:Recuperation_Total_EQ.in_chemin_Archive="C:\Process\SDM_StressTest\Archive" this:Recuperation_Total_EQ.in_Date_JJMMYYYY="180924" this:Recuperation_Total_EQ.in_Timeout="30000" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Recuperation_Total_EQ" this:Recuperation_Total_EQ.in_chemin_Archive="C:\Process\SDM_StressTest\Archive" this:Recuperation_Total_EQ.in_Date_JJMMYYYY="041024" this:Recuperation_Total_EQ.in_Timeout="30000" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_StepWorkflow" Type="InOutArgument(x:String)" />
     <x:Property Name="in_chemin_Archive" Type="InArgument(x:String)" />
@@ -417,7 +417,7 @@
           <OutArgument x:TypeArguments="x:String">[Ligne_Totale]</OutArgument>
         </ui:GetFromClipboard.Result>
       </ui:GetFromClipboard>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Ligne Totale OnShore_OffShore : &quot; + String.Join(&quot;;&quot;,Ligne_Totale.split(vbTab.ToCharArray))]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Ligne Totale OnShore : &quot; + String.Join(&quot;;&quot;,Ligne_Totale.split(vbTab.ToCharArray))]" />
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Montant Totale OnShore_OffShore : &quot; + Math.round(Double.Parse(Ligne_Totale.split(vbTab.ToCharArray).Last),2).ToString]" />
       <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
@@ -429,7 +429,7 @@
       </Assign>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="450,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Recuperation_Total_OnShore_OffShore</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Recuperation_Total_OnShore</InArgument>
           <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>

@@ -101,13 +101,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="1196,3242" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="1196,3243" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="492,3219" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Recuperation_Total_EQ" sap:VirtualizedContainerService.HintSize="492,3220" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:Image" Name="ScreenShot_EQDeal" />
         <Variable x:TypeArguments="x:String" Name="Ligne_Totale" />
@@ -153,13 +153,13 @@
         </ui:RetryScope.Condition>
       </ui:RetryScope>
       <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="458,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[in_chemin_Archive.TrimEnd(&quot;\&quot;c) +&quot;\&quot; + in_Date_JJMMYYYY]" />
-      <ui:SaveImage DisplayName="Save Image" FileName="[in_chemin_Archive.TrimEnd(&quot;\&quot;c) +&quot;\&quot; + in_Date_JJMMYYYY +&quot;\EQ Deal.png&quot;]" sap:VirtualizedContainerService.HintSize="458,165" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[ScreenShot_EQDeal]" />
-      <Assign sap:VirtualizedContainerService.HintSize="458,113" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <ui:SaveImage DisplayName="Save Image" FileName="[in_chemin_Archive.TrimEnd(&quot;\&quot;c) +&quot;\&quot; + in_Date_JJMMYYYY +&quot;\Equity.png&quot;]" sap:VirtualizedContainerService.HintSize="458,165" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[ScreenShot_EQDeal]" />
+      <Assign sap:VirtualizedContainerService.HintSize="458,114" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[out_Chemin_Image_EQ_Deal]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[in_chemin_Archive.TrimEnd("\"c) +"\" + in_Date_JJMMYYYY +"\EQ Deal.png"]</InArgument>
+          <InArgument x:TypeArguments="x:String">[in_chemin_Archive.TrimEnd("\"c) +"\" + in_Date_JJMMYYYY +"\Equity.png"]</InArgument>
         </Assign.Value>
       </Assign>
       <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Risk'" Found="[Totale_Existe]" sap:VirtualizedContainerService.HintSize="458,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
@@ -174,7 +174,7 @@
           </ui:Target>
         </ui:ImageFound.Target>
       </ui:ImageFound>
-      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not Totale_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,523" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not Totale_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="458,523" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
         <ui:InterruptibleWhile.Body>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,377" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
