@@ -161,7 +161,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="1196,4679" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="1196,19315" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Chemin_SPOTOFF" />
       <Variable x:TypeArguments="x:String" Name="Chemin_EQ" />
@@ -195,7 +195,7 @@
       <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_6" Path="[in_chemin_VAR_Archive.TrimEnd(&quot;\&quot;c) + &quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2)+&quot;\&quot; + in_NouveauMois_FR]" />
       <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_chemin_VAR_Archive.TrimEnd(&quot;\&quot;c) + &quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2)+&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY+&quot; -VAR&quot; +&quot;.xls&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="CopyFile_4" Overwrite="True" Path="[in_Chemin_Template_VAR]" />
     </Sequence>
-    <Sequence DisplayName="Traitement_KVAR" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="Sequence_86">
+    <Sequence DisplayName="Traitement_KVAR" sap:VirtualizedContainerService.HintSize="484,14686" sap2010:WorkflowViewState.IdRef="Sequence_86">
       <Sequence.Variables>
         <Variable x:TypeArguments="ss:SecureString" Name="Password_KVAR" />
         <Variable x:TypeArguments="x:String" Name="Username_MarketClient" />
@@ -203,17 +203,17 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="450,14403" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_13" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_VAR_Archive.TrimEnd(&quot;\&quot;c) + &quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2)+&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY+&quot; -VAR&quot; +&quot;.xls&quot;]">
+      <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="450,14594" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_13" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_chemin_VAR_Archive.TrimEnd(&quot;\&quot;c) + &quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2)+&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY+&quot; -VAR&quot; +&quot;.xls&quot;]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,14270" sap2010:WorkflowViewState.IdRef="Sequence_88">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,14461" sap2010:WorkflowViewState.IdRef="Sequence_88">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Chemin_image_EQ_Deal" />
                 <Variable x:TypeArguments="x:String" Name="Montant_EQ_Deal" />
@@ -239,76 +239,77 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lancement_KVAR - Invoke Workflow File (KVAR\Lancement_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_352" UnSafe="False" WorkflowFileName="KVAR\Lancement_KVAR.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lancement_KVAR - Invoke Workflow File (KVAR\Lancement_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_352" UnSafe="False" WorkflowFileName="KVAR\Lancement_KVAR.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_Stepworkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_KVAR">[in_Chemin_KVAR]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Lancement_KVAR - Invoke Workflow File (KVAR\Verification_Lancement_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_353" UnSafe="False" WorkflowFileName="KVAR\Verification_Lancement_KVAR.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Lancement_KVAR - Invoke Workflow File (KVAR\Verification_Lancement_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_353" UnSafe="False" WorkflowFileName="KVAR\Verification_Lancement_KVAR.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_Stepworkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Risk_StressTest_Credentials_KVAR" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password_KVAR]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_KVAR - Invoke Workflow File (KVAR\Authentification_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_355" UnSafe="False" WorkflowFileName="KVAR\Authentification_KVAR.xaml">
+              <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Risk_StressTest_Credentials_KVAR" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="382,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password_KVAR]" />
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_KVAR - Invoke Workflow File (KVAR\Authentification_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_355" UnSafe="False" WorkflowFileName="KVAR\Authentification_KVAR.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_Stepworkflow]</InOutArgument>
                   <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Password">[Password_KVAR]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Authentification_KVAR - Invoke Workflow File (KVAR\Verification_Authentification_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_354" UnSafe="False" WorkflowFileName="KVAR\Verification_Authentification_KVAR.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Authentification_KVAR - Invoke Workflow File (KVAR\Verification_Authentification_KVAR.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_354" UnSafe="False" WorkflowFileName="KVAR\Verification_Authentification_KVAR.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="risk_StressTest_MarketClient_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password_MarketClient]" Username="[Username_MarketClient]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_MarketClient - Invoke Workflow File (KVAR\Authentification_MarketClient.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_356" UnSafe="False" WorkflowFileName="KVAR\Authentification_MarketClient.xaml">
+              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="risk_StressTest_MarketClient_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="382,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password_MarketClient]" Username="[Username_MarketClient]" />
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_MarketClient - Invoke Workflow File (KVAR\Authentification_MarketClient.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_356" UnSafe="False" WorkflowFileName="KVAR\Authentification_MarketClient.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_UserName">[Username_MarketClient]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Password">[new System.Net.NetworkCredential(string.Empty, Password_MarketClient).Password]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Authentification_MarketClient - Invoke Workflow File (KVAR\Verification_Authentification_MarketClient.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_357" UnSafe="False" WorkflowFileName="KVAR\Verification_Authentification_MarketClient.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Authentification_MarketClient - Invoke Workflow File (KVAR\Verification_Authentification_MarketClient.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_357" UnSafe="False" WorkflowFileName="KVAR\Verification_Authentification_MarketClient.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_BMCEK_Live - Invoke Workflow File (KVAR\Navigation_BMCEK_Live.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_358" UnSafe="False" WorkflowFileName="KVAR\Navigation_BMCEK_Live.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_BMCEK_Live - Invoke Workflow File (KVAR\Navigation_BMCEK_Live.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_358" UnSafe="False" WorkflowFileName="KVAR\Navigation_BMCEK_Live.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_EQ_Deal - Invoke Workflow File (KVAR\Equity\Navigation_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_359" UnSafe="False" WorkflowFileName="KVAR\Equity\Navigation_EQ_Deal.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_EQ_Deal - Invoke Workflow File (KVAR\Equity\Navigation_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_359" UnSafe="False" WorkflowFileName="KVAR\Equity\Navigation_EQ_Deal.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_EQ_Deal - Invoke Workflow File (KVAR\Equity\Verification_Navigation_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_360" UnSafe="False" WorkflowFileName="KVAR\Equity\Verification_Navigation_EQ_Deal.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_EQ_Deal - Invoke Workflow File (KVAR\Equity\Verification_Navigation_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_360" UnSafe="False" WorkflowFileName="KVAR\Equity\Verification_Navigation_EQ_Deal.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_EQ_Deal - Invoke Workflow File (KVAR\Equity\Saisie_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_361" UnSafe="False" WorkflowFileName="KVAR\Equity\Saisie_EQ_Deal.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_EQ_Deal - Invoke Workflow File (KVAR\Equity\Saisie_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_361" UnSafe="False" WorkflowFileName="KVAR\Equity\Saisie_EQ_Deal.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_EQ_Deal - Invoke Workflow File (KVAR\Equity\Verification_Saisie_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_362" UnSafe="False" WorkflowFileName="KVAR\Equity\Verification_Saisie_EQ_Deal.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_EQ_Deal - Invoke Workflow File (KVAR\Equity\Verification_Saisie_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_362" UnSafe="False" WorkflowFileName="KVAR\Equity\Verification_Saisie_EQ_Deal.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_EQ - Invoke Workflow File (KVAR\Equity\Recuperation_Total_EQ.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_363" UnSafe="False" WorkflowFileName="KVAR\Equity\Recuperation_Total_EQ.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_EQ - Invoke Workflow File (KVAR\Equity\Recuperation_Total_EQ.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_363" UnSafe="False" WorkflowFileName="KVAR\Equity\Recuperation_Total_EQ.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -318,7 +319,7 @@
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_364" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_364" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -328,37 +329,37 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D16" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="Feuil1" Text="[Montant_EQ_Deal]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_EQ_Deal - Invoke Workflow File (KVAR\Equity\Fermeture_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_372" UnSafe="False" WorkflowFileName="KVAR\Equity\Fermeture_EQ_Deal.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_EQ_Deal - Invoke Workflow File (KVAR\Equity\Fermeture_EQ_Deal.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_372" UnSafe="False" WorkflowFileName="KVAR\Equity\Fermeture_EQ_Deal.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Navigation_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_365" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Navigation_OTC_Options.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Navigation_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_365" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Navigation_OTC_Options.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Verification_Navigation_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_366" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Verification_Navigation_OTC_Options.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Verification_Navigation_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_366" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Verification_Navigation_OTC_Options.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OTC_Option - Invoke Workflow File (KVAR\OTC Options\Saisie_OTC_Option.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_367" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Saisie_OTC_Option.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OTC_Option - Invoke Workflow File (KVAR\OTC Options\Saisie_OTC_Option.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_367" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Saisie_OTC_Option.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Verification_Saisie_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_368" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Verification_Saisie_OTC_Options.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Verification_Saisie_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_368" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Verification_Saisie_OTC_Options.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Recuperation_Total_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_369" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Recuperation_Total_OTC_Options.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Recuperation_Total_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_369" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Recuperation_Total_OTC_Options.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -368,7 +369,7 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="out_Chemin_Image_OTC_Options">[Chemin_Image_OTC_Options]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_371" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_371" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -378,37 +379,37 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D12" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Feuil1" Text="[Montant_OTC_Options]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Fermeture_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_373" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Fermeture_OTC_Options.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OTC_Options - Invoke Workflow File (KVAR\OTC Options\Fermeture_OTC_Options.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_373" UnSafe="False" WorkflowFileName="KVAR\OTC Options\Fermeture_OTC_Options.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Navigation_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_374" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Navigation_OnShore_OffShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Navigation_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_374" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Navigation_OnShore_OffShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Verification_Navigation_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_375" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Verification_Navigation_OnShore_OffShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Verification_Navigation_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_375" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Verification_Navigation_OnShore_OffShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Saisie_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_376" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Saisie_OnShore_OffShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Saisie_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_376" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Saisie_OnShore_OffShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Verification_Saisie_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_377" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Verification_Saisie_OnShore_OffShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Verification_Saisie_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_377" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Verification_Saisie_OnShore_OffShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Recuperation_Total_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_378" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Recuperation_Total_OnShore_OffShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Recuperation_Total_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_378" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Recuperation_Total_OnShore_OffShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -418,7 +419,7 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="out_Chemin_Image_OnShore_OffShore">[Chemin_Image_OnShore_OffShore]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_379" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_379" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -428,37 +429,37 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D11" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Feuil1" Text="[Montant_OnShore_OffShore]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Fermeture_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_382" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Fermeture_OnShore_OffShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OnShore_OffShore - Invoke Workflow File (KVAR\OnShore_OffShore\Fermeture_OnShore_OffShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_382" UnSafe="False" WorkflowFileName="KVAR\OnShore_OffShore\Fermeture_OnShore_OffShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OnShore - Invoke Workflow File (KVAR\OnShore\Navigation_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_383" UnSafe="False" WorkflowFileName="KVAR\OnShore\Navigation_OnShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OnShore - Invoke Workflow File (KVAR\OnShore\Navigation_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_383" UnSafe="False" WorkflowFileName="KVAR\OnShore\Navigation_OnShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OnShore - Invoke Workflow File (KVAR\OnShore\Verification_Navigation_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_392" UnSafe="False" WorkflowFileName="KVAR\OnShore\Verification_Navigation_OnShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OnShore - Invoke Workflow File (KVAR\OnShore\Verification_Navigation_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_392" UnSafe="False" WorkflowFileName="KVAR\OnShore\Verification_Navigation_OnShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OnShore - Invoke Workflow File (KVAR\OnShore\Saisie_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_385" UnSafe="False" WorkflowFileName="KVAR\OnShore\Saisie_OnShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OnShore - Invoke Workflow File (KVAR\OnShore\Saisie_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_385" UnSafe="False" WorkflowFileName="KVAR\OnShore\Saisie_OnShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OnShore - Invoke Workflow File (KVAR\OnShore\Verification_Saisie_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_386" UnSafe="False" WorkflowFileName="KVAR\OnShore\Verification_Saisie_OnShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OnShore - Invoke Workflow File (KVAR\OnShore\Verification_Saisie_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_386" UnSafe="False" WorkflowFileName="KVAR\OnShore\Verification_Saisie_OnShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OnShore - Invoke Workflow File (KVAR\OnShore\Recuperation_Total_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_387" UnSafe="False" WorkflowFileName="KVAR\OnShore\Recuperation_Total_OnShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OnShore - Invoke Workflow File (KVAR\OnShore\Recuperation_Total_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_387" UnSafe="False" WorkflowFileName="KVAR\OnShore\Recuperation_Total_OnShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -468,7 +469,7 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="out_Chemin_Image_OnShore_OffShore">[Chemin_Image_OnShore]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_389" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_389" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -478,36 +479,37 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D24" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="Feuil1" Text="[Montant_OnShore]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OnShore - Invoke Workflow File (KVAR\OnShore\Fermeture_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_388" UnSafe="False" WorkflowFileName="KVAR\OnShore\Fermeture_OnShore.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OnShore - Invoke Workflow File (KVAR\OnShore\Fermeture_OnShore.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_388" UnSafe="False" WorkflowFileName="KVAR\OnShore\Fermeture_OnShore.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Navigation_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_393" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Navigation_Trading_Compte_Propre.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Navigation_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_393" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Navigation_Trading_Compte_Propre.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Verification_Navigation_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_394" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Verification_Navigation_Trading_Compte_Propre.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Verification_Navigation_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_394" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Verification_Navigation_Trading_Compte_Propre.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Saisie_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_395" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Saisie_Trading_Compte_Propre.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Saisie_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_395" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Saisie_Trading_Compte_Propre.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Verification_Saisie_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_396" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Verification_Saisie_Trading_Compte_Propre.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Verification_Saisie_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_396" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Verification_Saisie_Trading_Compte_Propre.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Recuperation_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_397" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Recuperation_Trading_Compte_Propre.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Recuperation_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_397" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Recuperation_Trading_Compte_Propre.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -517,7 +519,7 @@
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_399" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_399" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -527,37 +529,37 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D17" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Feuil1" Text="[Montant_Trading_Compte_Propre]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Fermeture_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_398" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Fermeture_Trading_Compte_Propre.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Trading_Compte_Propre - Invoke Workflow File (KVAR\Trading_Compte_Propre\Fermeture_Trading_Compte_Propre.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_398" UnSafe="False" WorkflowFileName="KVAR\Trading_Compte_Propre\Fermeture_Trading_Compte_Propre.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Money_Market - Invoke Workflow File (KVAR\Money Market\Navigation_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_400" UnSafe="False" WorkflowFileName="KVAR\Money Market\Navigation_Money_Market.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Money_Market - Invoke Workflow File (KVAR\Money Market\Navigation_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_400" UnSafe="False" WorkflowFileName="KVAR\Money Market\Navigation_Money_Market.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Money_Market - Invoke Workflow File (KVAR\Money Market\Verification_Navigation_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_401" UnSafe="False" WorkflowFileName="KVAR\Money Market\Verification_Navigation_Money_Market.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Money_Market - Invoke Workflow File (KVAR\Money Market\Verification_Navigation_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_401" UnSafe="False" WorkflowFileName="KVAR\Money Market\Verification_Navigation_Money_Market.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Money_Market - Invoke Workflow File (KVAR\Money Market\Saisie_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_402" UnSafe="False" WorkflowFileName="KVAR\Money Market\Saisie_Money_Market.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Money_Market - Invoke Workflow File (KVAR\Money Market\Saisie_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_402" UnSafe="False" WorkflowFileName="KVAR\Money Market\Saisie_Money_Market.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_Money_Market - Invoke Workflow File (KVAR\Money Market\Verification_Saisie_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_403" UnSafe="False" WorkflowFileName="KVAR\Money Market\Verification_Saisie_Money_Market.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_Money_Market - Invoke Workflow File (KVAR\Money Market\Verification_Saisie_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_403" UnSafe="False" WorkflowFileName="KVAR\Money Market\Verification_Saisie_Money_Market.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_Money_Market - Invoke Workflow File (KVAR\Money Market\Recuperation_Total_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_404" UnSafe="False" WorkflowFileName="KVAR\Money Market\Recuperation_Total_Money_Market.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_Money_Market - Invoke Workflow File (KVAR\Money Market\Recuperation_Total_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_404" UnSafe="False" WorkflowFileName="KVAR\Money Market\Recuperation_Total_Money_Market.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -567,7 +569,7 @@
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_405" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_405" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -577,7 +579,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D13" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Feuil1" Text="[Montant_Money_Market]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Money_Market - Invoke Workflow File (KVAR\Money Market\Fermeture_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_406" UnSafe="False" WorkflowFileName="KVAR\Money Market\Fermeture_Money_Market.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Money_Market - Invoke Workflow File (KVAR\Money Market\Fermeture_Money_Market.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_406" UnSafe="False" WorkflowFileName="KVAR\Money Market\Fermeture_Money_Market.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
@@ -649,32 +651,32 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Navigation_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_414" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Navigation_Taux_MAD.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Navigation_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_414" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Navigation_Taux_MAD.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Verification_Navigation_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_415" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Verification_Navigation_Taux_MAD.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Verification_Navigation_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_415" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Verification_Navigation_Taux_MAD.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Saisie_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_416" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Saisie_Taux_MAD.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Saisie_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_416" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Saisie_Taux_MAD.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Verification_Saisie_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_417" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Verification_Saisie_Taux_MAD.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Verification_Saisie_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_417" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Verification_Saisie_Taux_MAD.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Recuperation_Total_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_418" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Recuperation_Total_Taux_MAD.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Recuperation_Total_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_418" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Recuperation_Total_Taux_MAD.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -684,7 +686,7 @@
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_420" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_420" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -694,37 +696,37 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D14" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="Feuil1" Text="[Montant_Taux_MAD]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Fermeture_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_421" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Fermeture_Taux_MAD.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_Taux_MAD - Invoke Workflow File (KVAR\Taux MAD\Fermeture_Taux_MAD.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_421" UnSafe="False" WorkflowFileName="KVAR\Taux MAD\Fermeture_Taux_MAD.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OPCVM - Invoke Workflow File (KVAR\OPCVM\Navigation_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_422" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Navigation_OPCVM.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation_OPCVM - Invoke Workflow File (KVAR\OPCVM\Navigation_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_422" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Navigation_OPCVM.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OPCVM - Invoke Workflow File (KVAR\OPCVM\Verification_Navigation_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_423" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Verification_Navigation_OPCVM.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Navigation_OPCVM - Invoke Workflow File (KVAR\OPCVM\Verification_Navigation_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_423" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Verification_Navigation_OPCVM.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OPCVM - Invoke Workflow File (KVAR\OPCVM\Saisie_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_424" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Saisie_OPCVM.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Saisie_OPCVM - Invoke Workflow File (KVAR\OPCVM\Saisie_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_424" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Saisie_OPCVM.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_YYYY_MM_JJ">[in_NouvelleDate_YYYY_MM_JJ]</InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OPCVM - Invoke Workflow File (KVAR\OPCVM\Verification_Saisie_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_425" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Verification_Saisie_OPCVM.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_Saisie_OPCVM - Invoke Workflow File (KVAR\OPCVM\Verification_Saisie_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_425" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Verification_Saisie_OPCVM.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OPCVM - Invoke Workflow File (KVAR\OPCVM\Recuperation_Total_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_426" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Recuperation_Total_OPCVM.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Recuperation_Total_OPCVM - Invoke Workflow File (KVAR\OPCVM\Recuperation_Total_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_426" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Recuperation_Total_OPCVM.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Archive">[in_Chemin_Archive]</InArgument>
@@ -734,7 +736,7 @@
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_Timeout">[in_Timeout]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_428" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ecriture_Image - Invoke Workflow File (KVAR\Ecriture_Image.xaml)" sap:VirtualizedContainerService.HintSize="382,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_428" UnSafe="False" WorkflowFileName="KVAR\Ecriture_Image.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Excel">[in_chemin_VAR_Archive.TrimEnd("\"c) + "\" + in_NouvelleDate_JJ_MM_YYYY.split("-"c)(2)+"\" + in_NouveauMois_FR +"\" + in_NouvelleDate_JJ_MM_YYYY+" -VAR" +".xls"]</InArgument>
@@ -744,7 +746,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ExcelWriteCell Cell="D15" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="382,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="Feuil1" Text="[Montant_OPCVM]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OPCVM - Invoke Workflow File (KVAR\OPCVM\Fermeture_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_427" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Fermeture_OPCVM.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fermeture_OPCVM - Invoke Workflow File (KVAR\OPCVM\Fermeture_OPCVM.xaml)" sap:VirtualizedContainerService.HintSize="382,198" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_427" UnSafe="False" WorkflowFileName="KVAR\OPCVM\Fermeture_OPCVM.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
@@ -765,7 +767,7 @@
       <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR]" />
       <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_NouvelleDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_NouveauMois_FR +&quot;\&quot; + in_NouvelleDate_JJ_MM_YYYY +&quot;.xls&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[in_chemin_StressTest_Archive.TrimEnd(&quot;\&quot;c) + &quot;\Stress test &quot; + in_AncieneeDate_JJ_MM_YYYY.split(&quot;-&quot;c)(2) +&quot;\&quot; + in_AncienneMois_FR +&quot;\&quot; + in_AncieneeDate_JJ_MM_YYYY +&quot;.xls&quot;]" />
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lancement_Kondor - Invoke Workflow File (Kondor\Lancement_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="484,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_236" UnSafe="False" WorkflowFileName="Kondor\Lancement_Kondor.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lancement_Kondor - Invoke Workflow File (Kondor\Lancement_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_236" UnSafe="False" WorkflowFileName="Kondor\Lancement_Kondor.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Kondor">[in_Chemin_Executable_Kondor]</InArgument>
@@ -789,8 +791,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Risk_StressTest_Kondor_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="484,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password_Kondor]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_Kondor - Invoke Workflow File (Kondor\Authentification_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="484,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_238" UnSafe="False" WorkflowFileName="Kondor\Authentification_Kondor.xaml">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Risk_StressTest_Kondor_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="484,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password_Kondor]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Authentification_Kondor - Invoke Workflow File (Kondor\Authentification_Kondor.xaml)" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_238" UnSafe="False" WorkflowFileName="Kondor\Authentification_Kondor.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_Stepworkflow]</InOutArgument>
         <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Password">[Password_Kondor]</InArgument>

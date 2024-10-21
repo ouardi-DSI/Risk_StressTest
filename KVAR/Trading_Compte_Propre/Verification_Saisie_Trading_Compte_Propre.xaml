@@ -1,7 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Verification_Saisie_EQ_Deal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Verification_Saisie_EQ_Deal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_StepWorkflow" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_Timeout" Type="InArgument(x:Int32)" />
   </x:Members>
+  <this:Verification_Saisie_EQ_Deal.in_Timeout>
+    <InArgument x:TypeArguments="x:Int32" />
+  </this:Verification_Saisie_EQ_Deal.in_Timeout>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -37,6 +41,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -82,6 +87,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Verification_Saisie_EQ_Deal" sap:VirtualizedContainerService.HintSize="1196,1262" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -90,7 +96,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Verification_Saisie_Trading_Compte_Propre" sap:VirtualizedContainerService.HintSize="484,1216" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Verification_Saisie_Trading_Compte_Propre" sap:VirtualizedContainerService.HintSize="484,1239" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="EQ_Grid_Existe" />
       </Sequence.Variables>
@@ -107,10 +113,7 @@
       </ui:InvokeWorkflowFile>
       <ui:UiElementExists DisplayName="Element Exists 'xmanager.exe Risk'" Exists="[EQ_Grid_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f43dbf5-12b1-4443-9dec-2e700325c917" InformativeScreenshot="75e730a5006a25dc08f8d1922968b533" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f43dbf5-12b1-4443-9dec-2e700325c917" InformativeScreenshot="75e730a5006a25dc08f8d1922968b533" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' /&gt;" TimeoutMS="[in_Timeout*10]">
             <ui:Target.WaitForReady>
               <InArgument x:TypeArguments="ui:WaitForReady" />
             </ui:Target.WaitForReady>

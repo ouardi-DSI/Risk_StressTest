@@ -110,7 +110,7 @@
       </ui:InvokeWorkflowFile>
       <ui:UiElementExists DisplayName="Element Exists 'xmanager.exe Risk'" Exists="[EQ_Grid_Existe]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f43dbf5-12b1-4443-9dec-2e700325c917" InformativeScreenshot="75e730a5006a25dc08f8d1922968b533" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' /&gt;" TimeoutMS="[in_Timeout*10]">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f43dbf5-12b1-4443-9dec-2e700325c917" InformativeScreenshot="75e730a5006a25dc08f8d1922968b533" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Grid : Interactive &amp;lt;Deal Code by Instrument Type&amp;gt;' /&gt;" TimeoutMS="[in_Timeout]">
             <ui:Target.WaitForReady>
               <InArgument x:TypeArguments="ui:WaitForReady" />
             </ui:Target.WaitForReady>
