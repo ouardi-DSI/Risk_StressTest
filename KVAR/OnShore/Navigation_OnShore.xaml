@@ -250,7 +250,7 @@
       </ui:ClickImage>
       <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,415" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <TryCatch.Try>
-          <ui:ClickImage ContinueOnError="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="1000" DelayMS="[cint(in_Timeout/3)]" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="1000" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -288,7 +288,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <ui:ClickImage ContinueOnError="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="1000" DelayMS="[cint(in_Timeout/3)]" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="1000" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:ClickImage.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -343,7 +343,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ClickImage ContinueOnError="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="1000" DelayMS="[cint(in_Timeout/3)]" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="382,178" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:ClickImage ContinueOnError="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="1000" DisplayName="Click Image 'xmanager.exe  Market'" sap:VirtualizedContainerService.HintSize="382,178" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:ClickImage.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
