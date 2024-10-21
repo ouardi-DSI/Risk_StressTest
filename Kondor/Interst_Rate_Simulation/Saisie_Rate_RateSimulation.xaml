@@ -96,16 +96,8 @@
   <Sequence DisplayName="Saisie_Rate_RateSimulation" sap:VirtualizedContainerService.HintSize="1196,3248" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Rate_Existe" />
-      <Variable x:TypeArguments="x:Boolean" Name="Shift_Existe">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Boolean" Name="Shift1_Exit">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="Shift_Existe" />
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="Shift1_Exit" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -394,7 +386,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ClickImage>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,475" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Shift_Existe or Shift1_Exit]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,475" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
@@ -407,10 +399,7 @@
               <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAARCAYAAACW7F9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVEhL7ZNBCsMwDAT9/0+2kIek6CAQ013XiaHUxYch0XqUWDhpz8dx/iN7sNXYg63GHixprb2hvEA5zmde+1xPj1uDqZyojapc4Xqv8LXBmMe1OsxdXbOsFdOfonIS5am6XnnfW6NXsYNFE3Geykl69FXunFozI5dPjLgXuM2N5M4hLg+m/7HRl2Y9kjund09unVg8MFHrifLYk/Unh+t0yPSn+KvswdbiOF8uOwdL4vh+8QAAAABJRU5ErkJggg==" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60fb681d-51dc-4d16-8113-740a1f55cf80" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60fb681d-51dc-4d16-8113-740a1f55cf80" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;" TimeoutMS="1000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
@@ -422,10 +411,7 @@
               <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAQCAYAAABdsIz2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACsSURBVEhL7ZJBCsNADAP3/59sIQ9J2YNhUOXGTulhyx4GLFlrEMl4Po7zH9nFVmMXW41WsTHGG5Wc+sw6PzRhvsKtYm4XaIZadw7NVN44flbM5bjjnlr3qjNP+epXdJlJlqOuzFdad8QWiwcky6hP9H13dpqe+qT9xTi7w+ox152dJh93zszgoeyo+tTd+UrrjrSKTeJYdnDCDHPUlTlQL7TmSLvYKuxia3GcL+Zup+G176GYAAAAAElFTkSuQmCC" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60fb681d-51dc-4d16-8113-740a1f55cf80" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60fb681d-51dc-4d16-8113-740a1f55cf80" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;" TimeoutMS="1000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
@@ -434,9 +420,6 @@
           </ui:ImageFound>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Shift_Existe or Shift1_Exit" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,415" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <sap:WorkflowViewStateService.ViewState>
