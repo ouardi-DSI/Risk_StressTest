@@ -89,7 +89,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Saisie_Rate_Simulation_OnShore" sap:VirtualizedContainerService.HintSize="1196,3651" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Saisie_Rate_Simulation_OnShore" sap:VirtualizedContainerService.HintSize="1196,4257" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Securities_Exists" />
       <Variable x:TypeArguments="x:Boolean" Name="MoneyMarket_Existe" />
@@ -124,6 +124,87 @@
         </ui:Target>
       </ui:ClickImage.Target>
     </ui:ClickImage>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="438,187" sap2010:WorkflowViewState.IdRef="ClickImage_27" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition OffsetX="10" OffsetY="10" Position="TopRight" />
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAASCAYAAADixHhYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVFhH7ZRbqsMwEEO9/022kIWkOGCqHuRXnBZC5+NgjUZ2W1246fnY9uBNFAKiEBCFgCgERCGgWUhKacp3XJHNPnG5K+gWwg+f/UJXZmfeOstSIUVrRnd6Ou1m9Qjz1HrqvuXpfHg0lHKhdiq60727M6IdvXv5rPn0aiwXknWBO907jzvmiMu27mtG0QwZ/qfqdM+r+cz0/IJ7o/Wuy/T4WSGqnUft4D7PvM9ZT2rHUiFFl1m17mvaZekpLu9m907N0/nwaNyJkR84y20LsX/dfy7kW0QhH2z7C0bC3Oh8A7IDAAAAAElFTkSuQmCC" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93928a8f-f1b1-496a-880f-17c31c44e274" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,419" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+      <TryCatch.Try>
+        <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_28" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:ClickImage.CursorPosition>
+          <ui:ClickImage.Image>
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAAMCAYAAABVwlLPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE4SURBVFhH7ZGBioRADEP9/5/2yGGGbEw76u4eePigzDRJO4jL+nB7np/4D3j5icuyjPoGure6v8ORPchoneXKDNC5qzsqxjZf/OmHnI9/yLZvtvevv5N8852xuXsEXvp41dK9O1nsieokaQ79ozlFNdy9706iOou45ifRXvMkaeBFYUiD6X5GSzqo8qTTEvA6n6QMNfVUq3TFe5DmwGzHLLub284dOqxFzVGtyqUM0LwW8d6h5zOJpOu8FjVF+y7DIrO7a1rEezIUN9nHoYlWzaYMqPJO5fuubk/yqHUe0T7NXb1XfsL90e2MZvkVDaQMSPlOczxT5YB7Pkt47/Kg64/cwZEd7fx2/gKTpZzVqCefVDnVSdIcz1R55jxPXPfMrAe6Q0/XiPdA8yRpYK883I7nJ96edf0BSPAn1ljZ7TEAAAAASUVORK5CYII=" />
+          </ui:ClickImage.Image>
+          <ui:ClickImage.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b45e59ae-a0c7-4e09-9952-ad50a2b11002" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XToplevel' idx='*' /&gt;" TimeoutMS="2000">
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:ClickImage.Target>
+        </ui:ClickImage>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_29" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:ClickImage.CursorPosition>
+              <ui:ClickImage.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAKCAYAAAC6/ACJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEnSURBVFhH7Y3RjsIwEAP5/5+GRjDcYHbT6FoekLBk2TsO5bLp+vPXuoQ/f4fvxdJ4mv3drh/xyndS1ZuZ//ObYf/O/QS/fzDvs3329/ke2Tn3vD/lD/7P/ONoxqo+S2TujbtjaXayc7Wbody6xNyWN5RveZM3yn3IbPPrOGSWnVxhQ8m7Tu6xyqja7OoNjEw2VHFYdSerOjnjdDL75md5mgcpb7YZnUze9ZT3Ie40G5ndrjgs5S3fupPmyGzWSbqVnPvh1x/7JqutY3QyedfJzt1ujrzb1QYjq6266eSRTmavHPv7D7jJoyzvqpN7LG2OvNu5+a46mXzlXul7N53MvvkPIo0Pss6GuHN3H5rxGUsj397NrW73nfvshg15R2Y4b9jQnF2uN24jRh3EqlqrAAAAAElFTkSuQmCC" />
+              </ui:ClickImage.Image>
+              <ui:ClickImage.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b45e59ae-a0c7-4e09-9952-ad50a2b11002" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XToplevel' idx='*' /&gt;" TimeoutMS="2000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ClickImage.Target>
+            </ui:ClickImage>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
     <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Interest'" Found="[Securities_Exists]" sap:VirtualizedContainerService.HintSize="438,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
       <ui:ImageFound.Image>
         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ8AAAATCAYAAACOTIhqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAImSURBVHhe7ZjNigMxDIPn/V9yF3qdd+iSg0EI2UkmmaFldfiILclp9wfTzvH783obY8wsXh4F53kaYxK8PAraL0jpxhh/8ijx8jAmx8ujwMvDmBwvjwIvD2NyvDwKvDyMyekuj+M4pnTFjmzTGZXbSbU87n4feG9WrzByT8sgKlNxZaaBc1fvMPcztDz4D6i0ip3ZmbtWyZYHv4e739Pu++O+3r1P/5zBU69j1lheHlFjBj08Va161BjOc40n+pWGPTK6PJDsNVBTdXUGqKMXfaYx4Y/mMq3V3FdngHqAHmp8Yg5r5bNm9jL8tSU7EfTQVzMjtaI3185MZ63H7NcWVc9oSs/qUU3RvMoPVCY09FDL9NBUz9rMHb0sz5l9bFkerQ7YQ19p7HGOUdlqHjMIZjJGH5hWrxEnglqWUxms24mgjz0THs9EjSgd5xH0OIu1ygSoVTVrCOvRm/1MPTBVdU/LdM709EDdUd2rMqPMPvNQr9HTslmVwZrzTObzXdU9ygut8lSv5q7Wma/o+eY6jy4PrJXGtYL91vM893hyXbGyPFY07nv5SmM4k+Ua7PEs11W+14/UvT7qat7sY3l5RB091uhntcqyhqi86tU9mYY9MvvMA/VRLXTlY61yqFcaw5ksHznOs489+1UfWuh4shZwH5rKqazZR3d5fDrqnwb7FUafeRjzH/nq5aEWhZeHMc/w9Z887sTLw5gcL48CLw9jMl7vPxUOBj956WcSAAAAAElFTkSuQmCC" />
@@ -144,13 +225,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,323" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,295" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="382,187" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition OffsetX="10" OffsetY="10" Position="TopRight" />
             </ui:ClickImage.CursorPosition>
@@ -168,7 +249,7 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -240,7 +321,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
