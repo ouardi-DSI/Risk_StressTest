@@ -95,7 +95,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Telechargement_GAP" sap:VirtualizedContainerService.HintSize="900,3748" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Telechargement_GAP" sap:VirtualizedContainerService.HintSize="1196,3386" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -107,7 +107,13 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,419" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
         <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Gap'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
           <ui:ClickImage.CursorPosition>
@@ -124,10 +130,7 @@
             <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAHCAYAAADznJjnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVEhLnYxBDsQwDAL9/093NwdXU4TjOEgoeKCN56+I+FgZVfEldrd2/1FGVXyJXWfVpE8p0z7F3WtXkDFPulu7f5AxT7rOuuXN7Fhq11fdawfJmNWuc2xi9z0Zs9p1jjnrjjezY5nz3eWSnYwo5bwrNrH7XhmlnHfFnFXa8VaWOd9dLtnRCGbHvGPJVdXuhKXZMTvm5HZ6Mzvmcr6aS9aNmLuuYhO778mYu65izrrjzeyYy/lqLlk3Yp50t3b/IGOedJ11y5vZMea8l3Y974h4fpU+pJRRZ1HIAAAAAElFTkSuQmCC" />
           </ui:ClickImage.Image>
           <ui:ClickImage.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d64a579-323c-4f37-9458-7c5936cde28c" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Gap Analysis' /&gt;">
-              <ui:Target.TimeoutMS>
-                <InArgument x:TypeArguments="x:Int32" />
-              </ui:Target.TimeoutMS>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d64a579-323c-4f37-9458-7c5936cde28c" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Gap Analysis' /&gt;" TimeoutMS="2000">
               <ui:Target.WaitForReady>
                 <InArgument x:TypeArguments="ui:WaitForReady" />
               </ui:Target.WaitForReady>
@@ -162,10 +165,7 @@
                 <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAALCAYAAABvaeOfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVFhH7ZHLCsUgEEP7/z/tJcJcpmnmoV20ix5QNJnEQo/x8TjfT3gB3094AfMnHMf1X7CGuy2P19nbRfWwFr3pdfYqqmzmR5phvpybG4nAa5dQ09tFdXTfzLyKlV7A/kr+5M2NBkBW4KmyOzz1PTxXvan8KJPl554NGLjb8nSyq3Q6cbfl6WQjfCdnVIfX7Kw0kOXnng0ouuUMdF4KpUezwHtVFmdehj+DzAORb+dufu7ZAGA/84DSVqg62c88oDTFnV517ubnng0A9rveLqqj+2bmVaz0gszHvfKN/8lCtpjI8zp7d6h6I8/r7FVU2cxXd6/ZnfUxxvgBljk0kdAA+ZcAAAAASUVORK5CYII=" />
               </ui:ClickImage.Image>
               <ui:ClickImage.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d64a579-323c-4f37-9458-7c5936cde28c" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Gap Analysis' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d64a579-323c-4f37-9458-7c5936cde28c" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Gap Analysis' /&gt;" TimeoutMS="2000">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
@@ -327,10 +327,7 @@
         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAOCAYAAABXV/AUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVFhH7ZBRCgQxCEN7/0t3yVKLZGOrndm/PpBiYpzB1i+PuUd8gXvEF5hHbO33nqyht/J4nb1T1B7Wom96nT1jNaN6NWdMVQ14jf2sd4rakf3mygPcgyifyo63tJjZZU/45/9UfDXLzIndYoDeypPJVsnsRG/l2WWrPnorxVTVQBQC3qtkoXMplB7NAu/tsie+IbPjLS9eeUBpFXY72V954NTnWZkdb2kxyHqnqB3Zb648wD2I8qnseL9gwBcTeV5n7wm7vZHndfaM1Yzq1Zyh1UuJe8QXuEd8TO8f7Y/JCsABOP4AAAAASUVORK5CYII=" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d64a579-323c-4f37-9458-7c5936cde28c" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Gap Analysis' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d64a579-323c-4f37-9458-7c5936cde28c" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Gap Analysis' /&gt;" TimeoutMS="2000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>

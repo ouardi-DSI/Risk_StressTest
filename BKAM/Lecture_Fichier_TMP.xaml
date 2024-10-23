@@ -99,24 +99,44 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Lecture_Fichier_TMP" sap:VirtualizedContainerService.HintSize="592,1632" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Lecture_Fichier_TMP" sap:VirtualizedContainerService.HintSize="1196,2023" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Text" />
+      <Variable x:TypeArguments="x:Boolean" Name="File_Existe" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="530,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="502,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Lecture_Fichier_TMP</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ReadTextFile File="{x:Null}" Content="[Text]" DisplayName="Read Text File" FileName="[in_CHemin_CSV]" sap:VirtualizedContainerService.HintSize="530,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" ColumnSeparators=";" DataTable="[out_DT_TMP]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="530,233" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[Text.Replace(&quot;&quot;&quot;&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;)]" />
-    <ui:FilterDataTable DataTable="[out_DT_TMP]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="530,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_DT_TMP]" SelectColumnsMode="Keep">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="502,484" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="100">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,338" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="in_CHemin_CSV" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:FileExistsX DisplayName="File Exists" Exists="[File_Existe]" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_CHemin_CSV]" />
+          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="not File_Existe" />
+      </ui:InterruptibleWhile.Condition>
+    </ui:InterruptibleWhile>
+    <ui:ReadTextFile File="{x:Null}" Content="[Text]" DisplayName="Read Text File" FileName="[in_CHemin_CSV]" sap:VirtualizedContainerService.HintSize="502,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" ColumnSeparators=";" DataTable="[out_DT_TMP]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="502,233" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[Text.Replace(&quot;&quot;&quot;&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;)]" />
+    <ui:FilterDataTable DataTable="[out_DT_TMP]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="502,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_DT_TMP]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -141,14 +161,14 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:RemoveDataRow Row="{x:Null}" DataTable="[out_DT_TMP]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="530,218" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="0" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_DT_TMP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,389" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
+    <ui:RemoveDataRow Row="{x:Null}" DataTable="[out_DT_TMP]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="502,218" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="0" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_DT_TMP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,361" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -166,7 +186,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="530,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="502,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Lecture_Fichier_TMP</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>

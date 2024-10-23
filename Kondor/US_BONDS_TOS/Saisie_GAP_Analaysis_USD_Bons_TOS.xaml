@@ -87,7 +87,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Saisie_GAP_Analaysis_USD" sap:VirtualizedContainerService.HintSize="900,3302" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Saisie_GAP_Analaysis_USD" sap:VirtualizedContainerService.HintSize="1196,3302" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Securities_Existe" />
       <Variable x:TypeArguments="x:Boolean" Name="MoneyMarket_Existe" />
@@ -672,7 +672,7 @@
         </ui:CursorPosition>
       </ui:ClickImage.CursorPosition>
       <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAYCAYAAACGLcGvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC6SURBVGhD7dVBCoQwDIXh3lg9sYLb3kHJohJro0SftchbfEymDQP9NxOmcV4IgzGBGBNoixljpJv6bjjGTDP5MCYQYwIxJhBjAlWNGULYKe14IH8LoVrM0oOfRGgloPZpTE3uE32m76zds89Ef5f5DU3EzO+sx1/N3n205mOWzq3Zu4/GmEBN/AHld1fn1uzdR6sWU8gjNOtOn+U7Z7N3H61qzL9jTCDGBGJMIMYEOsSUA7pvF5OempcV1hTbh/vMZAEAAAAASUVORK5CYII=" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAYCAYAAACGLcGvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC6SURBVGhD7dVBCoQwDIXh3lg9sYLb3kHJohJro0SftchbfEymDQP9NxOmcV4IgzGBGBNoixljpJv6bjjGTDP5MCYQYwIxJhBjAlWNGULYKe14IH8LoVrM0oOfRGgloPZpTE3uE32m76zds89Ef5f5DU3EzO+sx1/N3n205mOWzq3Zu4/GmEBN/AHld1fn1uzdR6sWU8gjNOtOn+U7Z7N3H61qzL9jTCDGBGJMIMYEOsSUA7pvF5OempcV1hTbh/vMZAEAAAAASUVORK5CYII=" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6d11140f-a7fa-485e-817d-e47e2eb864f6" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Gap Analysis Curves &amp;amp; Volatility' /&gt;">
@@ -691,7 +691,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ClickImage>
-    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="15000" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_37" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click Image 'xmanager.exe Interest'" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="ClickImage_37" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:ClickImage.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
