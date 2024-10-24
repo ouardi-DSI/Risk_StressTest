@@ -115,7 +115,7 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="502,484" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="100">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not File_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="502,484" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="10">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,338" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
@@ -127,12 +127,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:FileExistsX DisplayName="File Exists" Exists="[File_Existe]" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_CHemin_CSV]" />
-          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delay_1" />
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="not File_Existe" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <ui:ReadTextFile File="{x:Null}" Content="[Text]" DisplayName="Read Text File" FileName="[in_CHemin_CSV]" sap:VirtualizedContainerService.HintSize="502,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
     <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" ColumnSeparators=";" DataTable="[out_DT_TMP]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="502,233" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[Text.Replace(&quot;&quot;&quot;&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;)]" />
