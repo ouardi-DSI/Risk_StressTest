@@ -167,7 +167,7 @@
         <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAOCAYAAABkbO8dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVEhL7ZFRCsMwDENz/0t20IN0OOCiqpbjsVLSsY9HFFkxiLTXsm6/yL/Y09iLtdZOw8w3spmBc9d8sq5g+dH724p96ikw6zrcebhQgJc4PFcz9LLTQZ81ovJIqVjVZy/S0duKVqjMZcVMO5xDzafS6CmyzKFYN4LFvIAzKhvp6hv0FJjl/HTF/M4eM9pzKtbNYKl5Dno8R195eHKOZ4rsfffwMguVYiOmK3ZFKWPKH/uedXsD+ulm/CWd2HsAAAAASUVORK5CYII=" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="[cint(in_Timeout/10)]">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="2000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
@@ -205,7 +205,7 @@
               <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAOCAYAAABkbO8dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVEhL7ZFRCsMwDENz/0t20IN0OOCiqpbjsVLSsY9HFFkxiLTXsm6/yL/Y09iLtdZOw8w3spmBc9d8sq5g+dH724p96ikw6zrcebhQgJc4PFcz9LLTQZ81ovJIqVjVZy/S0duKVqjMZcVMO5xDzafS6CmyzKFYN4LFvIAzKhvp6hv0FJjl/HTF/M4eM9pzKtbNYKl5Dno8R195eHKOZ4rsfffwMguVYiOmK3ZFKWPKH/uedXsD+ulm/CWd2HsAAAAASUVORK5CYII=" />
             </ui:ImageFound.Image>
             <ui:ImageFound.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="[cint(in_Timeout/10)]">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="2000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>

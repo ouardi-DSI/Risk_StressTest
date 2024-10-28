@@ -90,7 +90,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Saisie_Rate_2" sap:VirtualizedContainerService.HintSize="1196,2519" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Saisie_Rate_2" sap:VirtualizedContainerService.HintSize="1196,2491" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Rate2_Existe" />
     </Sequence.Variables>
@@ -158,7 +158,7 @@
         <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAAWCAYAAAD0FL9fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVGhD7dbNCsMgEARg37jNE7fQa94hIYdthmV/1JRGcA4fjaMJRQa0vF+fjSjCklBqyJKs60oDGbYkVk73YEkoxZJQiiWhFEtCqbQkpZQvzHCNl+N73jsWryTyPfxupHZN7fdmFZZEb5yMazbUe7dGVJJorLXOt/zHmTSVROfHL67RuTfGtZbWksi3cT7KZKxFczPrPm70GH/1szWOXDluMK95Rl4+u6aLq2yi3kwr99bU6DlujmeRzWOOc5jR6Sd3Eiv31tToOW50Fj0jL6fTlCWx3iNf951Er9G5tSaaR1eOG8wxi8ZI5ujUdCf5F68kdA+WhFIsCaVYEkqxJJQasiTPx0LDWLYdmsDcL8mAD6IAAAAASUVORK5CYII=" />
       </ui:ImageFound.Image>
       <ui:ImageFound.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="[cint(in_Timeout/10)]">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b8b2c4ce-802f-480e-be81-adf54cc78412" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="2000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
@@ -171,20 +171,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ImageFound>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not Rate2_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[not Rate2_Existe]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,523" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,405" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,377" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'xmanager.exe Options'" sap:VirtualizedContainerService.HintSize="354,187" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="R">
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'xmanager.exe Options'" sap:VirtualizedContainerService.HintSize="382,187" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="R">
             <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0156bf29-a6d7-4785-afde-9db4a192c666" InformativeScreenshot="8c139139ce38a4e7db3cbed1824ac709" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0156bf29-a6d7-4785-afde-9db4a192c666" InformativeScreenshot="8c139139ce38a4e7db3cbed1824ac709" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Simulation 2-D Risk' /&gt;" TimeoutMS="2000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
