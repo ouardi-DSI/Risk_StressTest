@@ -93,7 +93,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Saisie_Rate_RateSimulation" sap:VirtualizedContainerService.HintSize="1196,3714" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Saisie_Rate_RateSimulation" sap:VirtualizedContainerService.HintSize="618,3714" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Rate_Existe" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="Shift_Existe" />
@@ -441,7 +441,7 @@
             </ui:CursorPosition>
           </ui:ClickImage.CursorPosition>
           <ui:ClickImage.Image>
-            <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAPCAYAAAA4YZtiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABxSURBVFhH7dQ5DsAgDAVR3/+SiUTLHUjrIEdKIgr7M8UTi8sR2Hm0kVHvPbxHjJAiCCmCkCIIKaJcSDO7ieZ+3UXJkG/OhEziT8in/Q6kvlZ/nmfqyr9Ij5AJEfIbmZDzPSGTWBHS8zNF5UIiRkgJbVw4/eSguik40gAAAABJRU5ErkJggg==" />
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAACm53kpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABoSURBVFhH7ZMxDsAgDAPz/09SiTV/oB1dFNTCEILi4QS2txPIVWrbjapuI4wAq/eAAqzSGwqgAAowexF5Ye14rhBewJ+cUsDoPsuxXwBzv81w1AtAKCCzgL6ngCcjuH0RWoAHyQXUdgMOdC7JaRZpHAAAAABJRU5ErkJggg==" />
           </ui:ClickImage.Image>
           <ui:ClickImage.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11d59773-2a40-4952-9b82-4953b69e0828" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Interest Rate Simulation 2-D Risk' /&gt;" TimeoutMS="3000">
