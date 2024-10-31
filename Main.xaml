@@ -241,17 +241,17 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="468,426" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="StepWorkflow" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="438,114" sap2010:WorkflowViewState.IdRef="Assign_25">
+                      <Assign DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_25">
                         <Assign.To>
                           <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
                         </Assign.To>
@@ -259,7 +259,7 @@
                           <InArgument x:TypeArguments="ui:BusinessRuleException">[Nothing]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="438,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Template_FXO_Simulation">[config("chemin_Template_FXO_Simulation").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_chemin_FXO_Simulation_Archive">[config("chemin_FXO_Simulation_Archive").ToString]</InArgument>
@@ -297,9 +297,19 @@
                           <InArgument x:TypeArguments="x:String" x:Key="in_Indices_To_Remove_Sensibility">[config("Indices_To_Remove_Sensibility").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_Executable_Kondor">[config("Chemin_Executable_kondor").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Statut">[TransactionItem.SpecificContent("Statut").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_FichierMO_Existe">[TransactionItem.SpecificContent("Fichier_MO").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CHemin_EQ_Existe">[TransactionItem.SpecificContent("Fichier_EQ").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CHemin_Pos_CH_OPT_Existe">[TransactionItem.SpecificContent("Fichier_POS").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CHemin_BAM_Existe">[TransactionItem.SpecificContent("Fichier_BAM").ToString]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="438,423" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                         <TryCatch.Try>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SetTransactionStatus (Success)" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Framework\SetTransactionStatus.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
@@ -445,6 +455,10 @@
                               <InArgument x:TypeArguments="x:String" x:Key="DerniereDate_Fomule_StressTest">[TransactionItem.SpecificContent("DerniereDate_Fomule_StressTest").ToString]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="NouvelleDate_Formule_StressTest">[TransactionItem.SpecificContent("NouvelleDate_Formule_StressTest").ToString]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="Statut">[Exception.Message.split(":"c)(1).Trim]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Fichier_MO">[TransactionItem.SpecificContent("Fichier_MO").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Fichier_EQ">[TransactionItem.SpecificContent("Fichier_EQ").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Fichier_POS">[TransactionItem.SpecificContent("Fichier_POS").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Fichier_BAM">[TransactionItem.SpecificContent("Fichier_BAM").ToString]</InArgument>
                             </ui:AddQueueItem.ItemInformation>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
