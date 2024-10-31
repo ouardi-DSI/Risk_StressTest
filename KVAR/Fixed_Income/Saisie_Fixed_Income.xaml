@@ -95,13 +95,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Saisie_EQ_Deal" sap:VirtualizedContainerService.HintSize="618,1542" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Saisie_EQ_Deal" sap:VirtualizedContainerService.HintSize="1196,1582" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Saisie_Fixed_Income" sap:VirtualizedContainerService.HintSize="468,1519" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Saisie_Fixed_Income" sap:VirtualizedContainerService.HintSize="468,1559" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -121,7 +121,7 @@
           <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAAWCAYAAABg3tToAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACeSURBVFhH7ZFBDoAwCAT9U///Jb6g8UCCuNvSg7Eoh0lgt22cuInI/jVKKgsllYV/SbXWLqAzbxD5FijlRVYRi37HTWp00fd213mURXI224zxiJR20czuOvsd3WMsKxXpGK9KedD5XsdY4k/1Orv7jnGTOvGX7Y5m1CmRzO4zHQNKnegD6CGbsRmdRbnvZ3cElcpMSWWhpLJQUjmQ/QAImNktCroI2QAAAABJRU5ErkJggg==" />
         </ui:ClickImage.Image>
         <ui:ClickImage.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2b25942-660d-40ba-b53e-8bd7ac1acc5e" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Assumption: BMCE_COM_Off_FINC_Deal-by-Ins_10d99%' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2b25942-660d-40ba-b53e-8bd7ac1acc5e" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='*Risk Assumption: BMCE_COM_Off_FINC_Deal-by-Ins_10d99%*' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -131,7 +131,7 @@
           </ui:Target>
         </ui:ClickImage.Target>
       </ui:ClickImage>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,419" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,459" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,7 +151,7 @@
               <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAUCAYAAAAz30VQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVFhH7ZRLCoAwDES9U+9/pV5BV4FhnLRNtQtjFw/mE4VB8Ki1nn9hj83KHpuVf48tpUj47imr3tvCHdvLvkh4rGnMvBx1624k73nOFdNjvR49516Hmv1sp1g6dkbPdNi3CP+g2PeeiepIh55zxdCXRVTfega7ER3pEMtVZywZ63nvZrQzrTrlmVfGYq56lXuec77l3jznitvYzOyxWdljc1LPC/zjtoPaOH90AAAAAElFTkSuQmCC" />
             </ui:ClickImage.Image>
             <ui:ClickImage.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca7c9b85-3c87-4283-83c9-c3111687446e" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Assumption: BMCE_COM_Off_FINC_Deal-by-Ins_10d99%' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca7c9b85-3c87-4283-83c9-c3111687446e" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='*Risk Assumption: BMCE_COM_Off_FINC_Deal-by-Ins_10d99%*' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -163,7 +163,7 @@
           </ui:ClickImage>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,265" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,7 +186,7 @@
                   <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAVCAYAAAD4g5b1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVFhH7ZRLCoAwDES9U+9/pV5BV4VxyJim6sKYxYP5RGEQ3Hrv+1+osVmpsVmpsVk5jW2tmeDNE7z1Xg9zrJd9ldDYoTFTOeqru5nc85wrlsaqHj3nqkPNfrVTvDZ2Ra902HuEflDsvWeiOtKh51zhflnE6q+ewW5GRzpk5FaHPD5WeXUz2w1tdZa3uD0Wc6u3cuU551vuh+dccRqbnRqblRqbk74fWUKV5RAeHkYAAAAASUVORK5CYII=" />
                 </ui:ClickImage.Image>
                 <ui:ClickImage.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca7c9b85-3c87-4283-83c9-c3111687446e" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Risk Assumption: BMCE_COM_Off_FINC_Deal-by-Ins_10d99%' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca7c9b85-3c87-4283-83c9-c3111687446e" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='*Risk Assumption: BMCE_COM_Off_FINC_Deal-by-Ins_10d99%*' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
