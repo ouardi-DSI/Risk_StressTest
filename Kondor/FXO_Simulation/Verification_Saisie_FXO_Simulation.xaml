@@ -2,6 +2,7 @@
   <x:Members>
     <x:Property Name="io_StepWorkflow" Type="InOutArgument(x:String)" />
     <x:Property Name="in_Timeout" Type="InArgument(x:Int32)" />
+    <x:Property Name="out_NoData_Existe" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <this:Verification_Saisie_FXO_Simulation_EUR_MAD.in_Timeout>
     <InArgument x:TypeArguments="x:Int32" />
@@ -91,79 +92,156 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verification_Saisie_FXO_Simulation" sap:VirtualizedContainerService.HintSize="416,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verification_Saisie_FXO_Simulation" sap:VirtualizedContainerService.HintSize="1836,1357" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Option_Warrant_Position_Existe" />
+      <Variable x:TypeArguments="x:Boolean" Name="NoData_Existe" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Debut - Invoke Workflow File (Logs\Log_Debut.xaml)" sap:VirtualizedContainerService.HintSize="418,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Verification_Saisie_FXO_Simulation</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:UiElementExists DisplayName="Element Exists 'xmanager.exe Kondor+'" Exists="[Option_Warrant_Position_Existe]" sap:VirtualizedContainerService.HintSize="354,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-      <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b5a4f932-cfc3-4cc0-adee-22080168cd15" InformativeScreenshot="6ae190d4d4266c6d864271f25135f8c9" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Position Report' /&gt;" TimeoutMS="[in_Timeout]">
+    <ui:ImageFound DisplayName="Image Exists 'xmanager.exe Kondor+'" Found="[out_NoData_Existe]" sap:VirtualizedContainerService.HintSize="418,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="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" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d4a168e-3eb8-417b-b3d3-6a232e02b897" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Kondor+ Report Manager' /&gt;" TimeoutMS="5000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
-      </ui:UiElementExists.Target>
+      </ui:ImageFound.Target>
+    </ui:ImageFound>
+    <If Condition="[out_NoData_Existe]" sap:VirtualizedContainerService.HintSize="418,796" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:UiElementExists>
-    <If Condition="[Option_Warrant_Position_Existe]" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="If_1">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,411" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Saisie SImulation Euro/MAD avec succès&quot;]">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:LogMessage>
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'xmanager.exe Kondor+'" sap:VirtualizedContainerService.HintSize="382,187" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:ClickImage.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:ClickImage.CursorPosition>
+            <ui:ClickImage.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAWCAYAAABXEBvcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVFhH7dTLCoMwEIXhvHH1iVtwm3ewzOKEqU4uTUialLP4YKLCyI/oXs/jpHoM2CgE3B47VfgIiJnKMWAjM6D3njLQKxoQM9mKAjrnyKB7ZQPi2kjWC+t7qXNv2DdtQGunvhabR8HO5QP+4t0E9i4dEPQzo2Dv8l/gdR4FOxmwEnb+RUDr3Bv2TRtQyF7tei917g37igPSne6VDEhxyYAyU140IJVjwEYhoPz36Fv+fAMoEhwRxAMQvgAAAABJRU5ErkJggg==" />
+            </ui:ClickImage.Image>
+            <ui:ClickImage.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="809f02a9-44c9-4155-8c14-876d4e84cb98" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Kondor+ Report Manager' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ClickImage.Target>
+          </ui:ClickImage>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;No data&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,247" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Echec Saisie SImulation Euro/MAD&quot;]">
+          <ui:UiElementExists DisplayName="Element Exists 'xmanager.exe Kondor+'" Exists="[Option_Warrant_Position_Existe]" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b5a4f932-cfc3-4cc0-adee-22080168cd15" InformativeScreenshot="6ae190d4d4266c6d864271f25135f8c9" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Options &amp;amp; Warrants Position Report' /&gt;" TimeoutMS="[in_Timeout]">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-          </ui:LogMessage>
+          </ui:UiElementExists>
+          <If Condition="[Option_Warrant_Position_Existe]" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="If_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Saisie SImulation Euro/MAD avec succès&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,363" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'xmanager.exe Kondor+'" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="919ede98-5613-41f7-bb79-f02c93795bbe" InformativeScreenshot="d8036543f3cbd4b7eeaffa72e658d444" Selector="&lt;wnd app='xmanager.exe' cls='Xmanager:XFrame' title='Kondor+ Report Manager' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Echec Saisie SImulation Euro/MAD&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+              </Sequence>
+            </If.Else>
+          </If>
         </Sequence>
       </If.Else>
     </If>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Log_Fin - Invoke Workflow File (Logs\Log_Fin.xaml)" sap:VirtualizedContainerService.HintSize="418,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Verification_Saisie_FXO_Simulation</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
